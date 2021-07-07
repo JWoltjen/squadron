@@ -1,7 +1,7 @@
 import React, {useState, createContext} from 'react'
-import {uuidv4} from 'uuid'
+import {v4 as uuidv4} from 'uuid'
 
-export const FlightContext = createContext() 
+export const FlightListContext = createContext() 
 
 const FlightContextProvider = props => {
    const [flights, setFlights] = useState([
@@ -9,9 +9,9 @@ const FlightContextProvider = props => {
 
     ])
     return (
-        <FlightContext.Provider value={{flights}}>
+        <FlightListContext.Provider value={{flights}}>
             {props.children}
-        </FlightContext.Provider>
+        </FlightListContext.Provider>
     )
 }
 
