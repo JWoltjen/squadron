@@ -11,11 +11,26 @@ const FlightContextProvider = props => {
             description: "this is a test"
         }
     ])
+
+    const [editFlight, setEditFlight] = useState(null)
+
     const addFlight = (description) => {
         setFlights([...flights, {id: uuidv4(), description}])
+    };
+
+    const removeFlight = id => {
+        setFlights(flights.filter(flight => flight.id !==id))
+    }; 
+
+    const clearList = () => {
+        setFlights([])
     }
+    const findFlight = (id) => {
+        const flight = flights.find(flight => flight.id === id)
+    }
+
     return (
-        <FlightListContext.Provider value={{flights, addFlight}}>
+        <FlightListContext.Provider value={{flights, addFlight, removeFlight, clearList, findFlight}}>
             {props.children}
         </FlightListContext.Provider>
     )

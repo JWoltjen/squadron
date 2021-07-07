@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {FlightListContext} from '../contexts/FlightContext'
 
 function Flight({flight}) {
+    const {removeFlight, findFlight} = useContext(FlightListContext)
     return (
         <div className='flight-card'>
             <h3>{flight.date}</h3>
