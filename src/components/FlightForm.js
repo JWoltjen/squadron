@@ -1,5 +1,5 @@
 import React from 'react'
-import {FlightListContext} from '../contexts/FlightListContext'
+import {FlightListContext} from '../contexts/FlightContext'
 function FlightForm() {
     return (
         <form className='form'>
