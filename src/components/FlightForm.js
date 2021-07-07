@@ -1,20 +1,48 @@
-import React from 'react'
+import React, {useContext, useEffect, useState} from 'react'
+
 import {FlightListContext} from '../contexts/FlightContext'
+
 function FlightForm() {
+    const {addFlight, clearFlight, editItem, editFlight} = useContext(FlightListContext)
+    const [description, setDescription] = useState('')
+    const handleChange = e => {
+        setDescription(e.target.value)
+    }
+    const handleSubmit = e => {
+        e.preventDefault(); 
+        if(editItem === null){
+            addFlight(description)
+            setDescription('')
+        } else {
+            editFlight(description, editItem.id)
+    }
+    }; 
+
+    useEffect(() => {
+        if(editItem !==null){
+            setDescription(editItem.description)
+            console.log(editItem)
+        } else {
+            setDescription('')
+        }
+    }, [editItem]); 
+
     return (
-        <form className='form'>
+        <form onSubmit={handleSubmit} className='form'>
             <input type='date'/>
             <input type="text"
+            onChange={handleChange}
+            value={description}
             className='flight-description'
             placeholder='Add description'
             required
-            />
+        />
             <div className='buttons'>
                 <button type='submit' className='btn-add-flight-btn'>Submit</button>
-                <button type='submit' className='btn-clear-flight-btn'>Clear</button>
+                <button onClick={clearFlight} className='btn-clear-flight-btn'>Clear</button>
             </div>
         </form>
     )
-}
+}; 
 
 export default FlightForm

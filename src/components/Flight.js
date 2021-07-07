@@ -9,7 +9,7 @@ function Flight({flight}) {
             <p>{flight.description}</p>
             <div>
                 <button className='btn-delete-flight-btn'>Delete</button>
-                <button className='btn-edit-flight-btn'>Edit</button>
+                <button onClick={() => findFlight(flight.id)}   className='btn-edit-flight-btn'>Edit</button>
 
             </div>
         </div>
