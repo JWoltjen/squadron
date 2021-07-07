@@ -1,14 +1,18 @@
 import './App.css';
-import { BrowserRouter, Route, Link} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import FlightLog from './components/FlightLog'
-import FlightContextProvider from './contexts/FlightContext'
+import FlightContextProvider from './contexts/FlightListContext'
 import FlightForm from './components/FlightForm'
 
 function App() {
   return (
 <FlightContextProvider>
-  <FlightLog/>
-  <FlightForm/>
+  <Router>
+    <div className='App'>
+    <FlightLog/>
+    <FlightForm/>
+    </div>
+  </Router>
 </FlightContextProvider>
   )
 }
