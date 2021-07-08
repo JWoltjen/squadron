@@ -112,3 +112,21 @@ nav {
   padding-left: 2px;
   padding-right: 2px;
 }
+
+.history-container {
+  margin: 2rem 1rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.notable-members {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
