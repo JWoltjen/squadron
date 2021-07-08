@@ -75,6 +75,7 @@ nav {
   position: absolute;
   top: 0.5rem;
   left: 1rem;
+  font-weight: bolder;
   font-family: "Inconsolata", monospace;
 }
 
@@ -82,8 +83,6 @@ nav {
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: flex;
-  justify-content: flex-start;
-  text-align: left;
   font-family: "Inconsolata", monospace;
 }
 .flight-card-buttons {

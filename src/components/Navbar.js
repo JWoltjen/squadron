@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Link} from 'react-router-dom'; 
+import {FlightListContext} from '../contexts/FlightContext'
 
 function Navbar() {
+    const {flights} = useContext(FlightListContext)
+
     return (
         <nav>
             <h3>Logo</h3>
@@ -16,6 +19,9 @@ function Navbar() {
                      <li className='link'>Flight Log</li>
                 </Link>
             </ul>
+              <h3 className='nav-flight-stat'>
+                    Flights: {flights.length}
+                </h3>
         </nav>
     )
 }
