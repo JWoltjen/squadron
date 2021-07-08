@@ -62,7 +62,7 @@ function FlightForm() {
             placeholder='Add description'
             required
         />
-        <span className='add-flight-kills'>
+        <span className='flight-form-stats'>
                 <label for="kills">Kills</label>
                 <input 
                     type='number' 
@@ -97,7 +97,7 @@ function FlightForm() {
                 required
             />
             </span>
-            <div className='buttons'>
+            <div className='flight-form-buttons'>
                 <button type='submit' className='btn-add-flight-btn'>Submit</button>
                 <button onClick={clearFlight} type='button' className='btn-clear-flight-btn'>Clear</button>
             </div>
