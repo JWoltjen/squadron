@@ -53,6 +53,10 @@ function FlightForm() {
     }, [editItem]); 
 
     return (
+        <>
+        <h3 className='flight-form-header'>
+            Enter new flight: 
+        </h3>
         <form onSubmit={handleSubmit} className='flight-form'>
             <input 
                 className='flight-form-date' 
@@ -107,6 +111,7 @@ function FlightForm() {
                 <button onClick={clearFlight} type='button' className='btn-clear-flight-btn'>Clear</button>
             </div>
         </form>
+        </>
     )
 }; 
 
