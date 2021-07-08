@@ -32,6 +32,18 @@ nav {
   font-size: small;
   font-family: "Anton", sans-serif;
 }
+.nav-stats {
+  display: flex;
+  text-align: right;
+  padding-left: 1rem;
+}
+.nav-stat {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  align-content: flex-end;
+}
 
 .main-container {
   background-color: steelblue;

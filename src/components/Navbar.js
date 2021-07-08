@@ -1,10 +1,17 @@
-import React, {useContext} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import {Link} from 'react-router-dom'; 
 import {FlightListContext} from '../contexts/FlightContext'
 
 function Navbar() {
     const {flights} = useContext(FlightListContext)
-
+    const [kills, setKills] = useState(flights.reduce((killTotal, currentFlight) => {
+                    killTotal += currentFlight.kills
+                    return killTotal
+                }, 0))
+    const [losses, setLosses] = useState(flights.reduce((lossTotal, currentFlight) => {
+                        lossTotal += currentFlight.losses
+                        return lossTotal
+                    }, 0))
     return (
         <nav>
             <h3>Logo</h3>
@@ -19,25 +26,17 @@ function Navbar() {
                      <li className='link'>Flight Log</li>
                 </Link>
             </ul>
+            <div className='nav-stats'>
               <h3 className='nav-flight-stat'>
                     Flights: {flights.length}
                 </h3>
-            <h3 className='nav-flight-kills'>
-                Kills: {
-                flights.reduce((killTotal, currentFLight) => {
-                    killTotal += currentFLight.kills
-                    return killTotal
-                }, 0)
-                }
+            <h3 className='nav-flight-stat'>
+                Kills: {kills}
             </h3>
-            <h3 className='nav-flight-losses'>
-                Losses: {
-                    flights.reduce((lossTotal, currentFlight) => {
-                        lossTotal += currentFlight.losses
-                        return lossTotal
-                    }, 0)
-                }
+            <h3 className='nav-flight-stat'>
+                Losses: {losses}
             </h3>
+            </div>
         </nav>
     )
 }
