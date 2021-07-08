@@ -3,6 +3,8 @@
   padding: 0;
 }
 
+/* Navbar */
+
 nav {
   display: flex;
   align-items: center;
@@ -30,19 +32,31 @@ nav {
   font-size: small;
   font-family: "Anton", sans-serif;
 }
+
 .main-container {
-  background-color: rgba(16, 60, 135, 0.885);
+  background-color: steelblue;
+  height: 85vh;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+}
+.home-container {
+  background-color: steelblue;
   height: 85vh;
   padding-bottom: 3rem;
   padding-top: 1rem;
 }
 
+/*FlightCard*/
+.flight-log-container {
+  background-color: steelblue;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .flight-card {
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-top: 1rem;
-  padding: 2rem 1rem;
-  height: 20vh;
+  padding: 1rem 1rem;
+  height: 25vh;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -77,6 +91,8 @@ nav {
   padding-left: 2px;
   padding-right: 2px;
 }
+
+/*flight form*/
 
 .flight-form {
   margin: 1rem 1rem;
@@ -115,6 +131,8 @@ nav {
   padding-right: 2px;
 }
 
+/*squadron */
+
 .history-container {
   padding: 1rem 1rem;
   height: 200%;
@@ -130,7 +148,7 @@ nav {
   border-radius: 5px;
   background-color: wheat;
 }
-.notable-members {
+.members {
   margin-top: 1rem;
   padding-top: 1rem;
   padding-left: 2rem;

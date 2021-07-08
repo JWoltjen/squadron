@@ -5,7 +5,7 @@ import FlightContextProvider from './contexts/FlightContext'
 import FlightForm from './components/FlightForm'
 import Navbar from './components/Navbar'
 import Squadron from './components/Squadron'
-import PhotoGallery from './components/KoreanWar'
+import PhotoGallery from './components/PhotoGallery'
 import Home from './components/Home'
 
 

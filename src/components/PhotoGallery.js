@@ -3,7 +3,8 @@ import React from 'react'
 function PhotoGallery() {
     return (
         <div>
-Photos go here        </div>
+            
+        </div>
     )
 }
 

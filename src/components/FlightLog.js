@@ -6,7 +6,7 @@ import Flight from './Flight'
 function FlightLog() {
     const {flights} = useContext(FlightListContext)
     return (
-        <div>
+        <div className='flight-log-container'>
             {flights.length ? (
             <ul className='flight-log'>
                 {flights.map(flight => {
