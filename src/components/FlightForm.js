@@ -54,7 +54,12 @@ function FlightForm() {
 
     return (
         <form onSubmit={handleSubmit} className='flight-form'>
-            <input className='flight-form-date' type='date' onChange={updateDate}/>
+            <input 
+                className='flight-form-date' 
+                type='date' 
+                onChange={updateDate}
+                required
+                />
             <input type="text"
             onChange={handleChange}
             value={description}
