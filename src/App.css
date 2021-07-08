@@ -30,7 +30,7 @@ nav {
 }
 
 .flight-card {
-  margin: 2rem 2rem;
+  margin: 1rem 1rem;
   padding: 2rem 1rem;
   height: 20vh;
   width: auto;
@@ -60,4 +60,25 @@ nav {
   position: absolute;
   bottom: 0.5rem;
   left: 1rem;
+}
+
+.flight-form {
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+  height: 20vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: peachpuff;
+  position: relative;
+}
+.flight-form-description {
+  height: 80%;
+}
+.flight-form-date {
+  padding: 0;
+  width: 33%;
 }

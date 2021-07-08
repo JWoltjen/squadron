@@ -29,18 +29,18 @@ function FlightForm() {
     }, [editItem]); 
 
     return (
-        <form onSubmit={handleSubmit} className='form'>
-            <input type='date'/>
+        <form onSubmit={handleSubmit} className='flight-form'>
+            <input className='flight-form-date' type='date'/>
             <input type="text"
             onChange={handleChange}
             value={description}
-            className='flight-description'
+            className='flight-form-description'
             placeholder='Add description'
             required
         />
             <div className='buttons'>
-                <button onClick={addFlight} type='submit' className='btn-add-flight-btn'>Submit</button>
-                <button onClick={clearFlight} className='btn-clear-flight-btn'>Clear</button>
+                <button type='submit' className='btn-add-flight-btn'>Submit</button>
+                <button onClick={clearFlight} type='button' className='btn-clear-flight-btn'>Clear</button>
             </div>
         </form>
     )
