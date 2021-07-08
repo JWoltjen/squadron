@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import FlightLog from './components/FlightLog'
+import FlightContextProvider from './contexts/FlightContext'
+import FlightForm from './components/FlightForm'
+import Navbar from './components/Navbar'
+import BRS from './components/BRS'
+import PhotoGallery from './components/KoreanWar'
+import Home from './components/Home'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+<FlightContextProvider>
+  <Router>
+    <Navbar/>
+    <Switch>
+      <Route path='/BRS' component={BRS}/>
+      <Route path='/PhotoGallery' component={PhotoGallery}/>
+      <Route path='/FlightLog' component={FlightLog}/>
+    </Switch> 
+  <Home/>
+  </Router>
+</FlightContextProvider>
+  )
 }
 
 export default App;
