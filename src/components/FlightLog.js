@@ -10,7 +10,7 @@ function FlightLog() {
             {flights.length ? (
             <ul className='flight-log'>
                 {flights.map(flight => {
-                    return <Flight flight={flight} key={flight.id} /> 
+                    return <Flight flight={flight} key={flight.id} description={flight.description} date={flight.date} /> 
                 })}
             </ul>
             ): (

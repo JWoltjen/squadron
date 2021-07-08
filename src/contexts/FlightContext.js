@@ -14,8 +14,8 @@ const FlightContextProvider = props => {
 
     const [editItem, setEditItem] = useState(null)
 
-    const addFlight = (description) => {
-        setFlights([...flights, {id: uuidv4(), description}])
+    const addFlight = (description, date) => {
+        setFlights([...flights, {id: uuidv4(), date: date, description: description}])
     };
 
     const removeFlight = id => {
@@ -29,8 +29,8 @@ const FlightContextProvider = props => {
         const item = flights.find(flight => flight.id === id)
         setEditItem(item)
     }
-    const editFlight = (description, id) => {
-        const newFlights = flights.map(flight => (flight.id === id ? {description, id} : flight))
+    const editFlight = (description, date, id) => {
+        const newFlights = flights.map(flight => (flight.id === id ? {description, date, id} : flight))
         setFlights(newFlights)
         setEditItem(null)
     }

@@ -5,6 +5,7 @@ import {FlightListContext} from '../contexts/FlightContext'
 function FlightForm() {
     const {addFlight, clearFlight, editItem, editFlight} = useContext(FlightListContext)
     const [description, setDescription] = useState('')
+    const [date, setDate] = useState('')
 
     const handleChange = e => {
         setDescription(e.target.value)
@@ -12,12 +13,16 @@ function FlightForm() {
     const handleSubmit = e => {
         e.preventDefault(); 
         if(editItem === null){
-            addFlight(description)
+            addFlight(description, date)
             setDescription('')
+            setDate('')
         } else {
             editFlight(description, editItem.id)
     }
     }; 
+    const updateDate = e => {
+        setDate(e.target.value)
+    }
 
     useEffect(() => {
         if(editItem !==null){
@@ -30,7 +35,7 @@ function FlightForm() {
 
     return (
         <form onSubmit={handleSubmit} className='flight-form'>
-            <input className='flight-form-date' type='date'/>
+            <input className='flight-form-date' type='date' onChange={updateDate}/>
             <input type="text"
             onChange={handleChange}
             value={description}
