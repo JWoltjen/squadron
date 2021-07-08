@@ -10,10 +10,34 @@ function BRS() {
                 <p>In the beginning the members met each other in a custom battle in War Thunder Arcade in June 18, 2013. Wolf was 28 years old at the time, Pyzro was also the same age. Weisser, Hellcat, Deeno, and Reconcilliation were in high school. Jolly and PJ were at university. The squadron predominately flew arcade battles together and communicated over a teamspeak channel someone set up. Arcade battles were a style of play which allowed a player to spawn in more than one time per match, even after dying. The gameplay was also unrealistic, and well, arcadey. Towards the end of this era, Pyzro set up a squadron website hosted on Enjin, and the squadron migrated to "Realistic Battles." </p>
                 <h2 className='history-subtitle'>2014-2016: The Squadron Battles Era</h2>
                 <p>
-                    This was the golden age of War Thunder and also the squadron itself. 
+                    War Thunder was growing rapidly and so was the squadron. During this period, 
+                    War Thunder would experiment with new game modes and schemes. Most of them sucked, 
+                    but every once and a while, Gaijin would strike gold. Squadron Battles happened to be 
+                    one of those times. This was the golden age of War Thunder and also the squadron itself. 
+                </p>
+                <p>
+                    Squadron Battles allowed teams of 8 players from the same squadron to face off against another
+                    squadron of 8 pilots at a time. The game mode was attached to an ELO ranking table for the entire 
+                    gaming community to see. Understandably, this became the focal point for squadron social dynamics and 
+                    War Thunder game play at large. This was because every time you faced off against another squadron in 
+                    an 8 v. 8 jet battle, you were keeping score. For the better part of the year, The Bloody Red Squadron 
+                    was on top of the squadron leader boards for Realistic Battles. As such, we developped many adversaries, 
+                    such as CAT, SINUIJU, KLAN, as well as a series of Russia squadrons that were frequent flyers on the jet scene. 
+                    Matches between these teams were heated, and often trash talk was exchanged on both sides. 
+                </p>
+                <p>
+                   Entire weekends revolved around squadron battles. The best pilots from each squadron waited eagerly
+                   in the teamspeak, sharing memes and youtube videos, discussing philosophy and politics, cracking 
+                   jokes and trying to pass the time in the queue. Back in the day, you could wait 40 minutes for a game of 
+                   eight v. eight jets; there simply weren't enough players back then who had jets, much less hung out 
+                   in a squadron of them. This made dying or losing all the more excrutiating, and winning and victory all the more jubilant. 
+                   Whatever the outcome of the game, it would stick with you. It would linger in your bones, and on your mind.
                 </p>
                 <h2 className='history-subtitle'>2017-2019: The Twilight Era</h2>
-                <p>Sometime early within this period, JollyOldChap joined the Royal Navy submarine fleet. This left a hole in leadership that was never truly filled. This was also the period when Weisser was at college and away. Pyzro became more interested in RocketLeague, Wolf stopped playing War Thunder on a daily basis.</p>
+                <p>Sometime early within this period, JollyOldChap joined the Royal Navy submarine fleet. 
+                    This left a hole in leadership that was never truly filled. This was also the period 
+                    when Weisser was at college and away. Pyzro became more interested in RocketLeague, 
+                    Wolf stopped playing War Thunder on a daily basis.</p>
                 <h2>2020-2021: The Dispersal</h2>
                 <p></p>
             </div>
