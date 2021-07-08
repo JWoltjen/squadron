@@ -5,6 +5,7 @@ import {FlightListContext} from '../contexts/FlightContext'
 function FlightForm() {
     const {addFlight, clearFlight, editItem, editFlight} = useContext(FlightListContext)
     const [description, setDescription] = useState('')
+
     const handleChange = e => {
         setDescription(e.target.value)
     }
@@ -38,7 +39,7 @@ function FlightForm() {
             required
         />
             <div className='buttons'>
-                <button type='submit' className='btn-add-flight-btn'>Submit</button>
+                <button onClick={addFlight} type='submit' className='btn-add-flight-btn'>Submit</button>
                 <button onClick={clearFlight} className='btn-clear-flight-btn'>Clear</button>
             </div>
         </form>
