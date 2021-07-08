@@ -4,7 +4,7 @@ import FlightLog from './components/FlightLog'
 import FlightContextProvider from './contexts/FlightContext'
 import FlightForm from './components/FlightForm'
 import Navbar from './components/Navbar'
-import BRS from './components/BRS'
+import Squadron from './components/Squadron'
 import PhotoGallery from './components/KoreanWar'
 import Home from './components/Home'
 
@@ -16,7 +16,7 @@ function App() {
   <Router>
     <Navbar/>
     <Switch>
-      <Route path='/BRS' component={BRS}/>
+      <Route path='/Squadron' component={Squadron}/>
       <Route path='/PhotoGallery' component={PhotoGallery}/>
       <Route path='/FlightLog' component={FlightLog}/>
     </Switch> 

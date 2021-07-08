@@ -6,8 +6,8 @@ function Navbar() {
         <nav>
             <h3>Logo</h3>
             <ul className='nav-links'>
-                <Link to ='/BRS'>
-                    <li className='link'>BRS</li>
+                <Link to ='/Squadron'>
+                    <li className='link'>Squadron</li>
                 </Link>
                 <Link to="/PhotoGallery">
                      <li className='link'>Photo Gallery</li>
