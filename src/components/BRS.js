@@ -38,6 +38,7 @@ function BRS() {
                     This left a hole in leadership that was never truly filled. This was also the period 
                     when Weisser was at college and away. Pyzro became more interested in RocketLeague, 
                     Wolf stopped playing War Thunder on a daily basis.</p>
+                    <p>The War Thunder meta had also changed. There were now not only planes and tanks, but also boats, from every era. There were jets with missiles and radar--the Sabre and MiG no longer held any special place at the top. This in effect made it much less likely to run into another member of the jet "community" as the player base diluted due to personal preferences.</p>
                 <h2>2020-2021: The Dispersal</h2>
                 <p></p>
             </div>
@@ -69,6 +70,9 @@ function BRS() {
                     </li>
                     <li>
                         Vulcan
+                    </li>
+                    <li>
+                        Epic_
                     </li>
                     <li>
                         ShadowThreat

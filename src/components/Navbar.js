@@ -9,11 +9,8 @@ function Navbar() {
                 <Link to ='/BRS'>
                     <li className='link'>BRS</li>
                 </Link>
-                <Link to="/KoreanWar">
-                     <li className='link'>Korean War</li>
-                </Link>
-                <Link to="/ServerInfo">
-                    <li className='link'>Server Info</li>
+                <Link to="/PhotoGallery">
+                     <li className='link'>Photo Gallery</li>
                 </Link>
                 <Link to='/FlightLog'>
                      <li className='link'>Flight Log</li>

@@ -1,11 +1,10 @@
 import React from 'react'
 
-function KoreanWar() {
+function PhotoGallery() {
     return (
         <div>
-           A History of the Korean War 
-        </div>
+Photos go here        </div>
     )
 }
 
-export default KoreanWar
+export default PhotoGallery

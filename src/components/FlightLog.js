@@ -1,5 +1,6 @@
 import React, {useContext} from 'react'
 import {FlightListContext} from '../contexts/FlightContext'
+import FlightForm from './FlightForm'
 import Flight from './Flight'
 
 function FlightLog() {
@@ -15,6 +16,7 @@ function FlightLog() {
             ): (
                 <div className="no-flights">No Flights</div>
             )}
+            <FlightForm/>
         </div>
     )
 }
