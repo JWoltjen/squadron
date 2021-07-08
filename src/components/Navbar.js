@@ -22,6 +22,22 @@ function Navbar() {
               <h3 className='nav-flight-stat'>
                     Flights: {flights.length}
                 </h3>
+            <h3 className='nav-flight-kills'>
+                Kills: {
+                flights.reduce((killTotal, currentFLight) => {
+                    killTotal += currentFLight.kills
+                    return killTotal
+                }, 0)
+                }
+            </h3>
+            <h3 className='nav-flight-losses'>
+                Losses: {
+                    flights.reduce((lossTotal, currentFlight) => {
+                        lossTotal += currentFlight.losses
+                        return lossTotal
+                    }, 0)
+                }
+            </h3>
         </nav>
     )
 }
