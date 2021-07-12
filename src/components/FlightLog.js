@@ -6,11 +6,15 @@ import Flight from './Flight'
 function FlightLog() {
     const {flights} = useContext(FlightListContext)
     return (
-        <div>
+        <>
+        <div className='flight-log-container'>
+             <h3 className='flight-log-header'>
+                Flight Log
+                </h3>
             {flights.length ? (
             <ul className='flight-log'>
                 {flights.map(flight => {
-                    return <Flight flight={flight} key={flight.id} /> 
+                    return <Flight flight={flight} key={flight.id} description={flight.description} date={flight.date} kills={flight.kills} wingmen={flight.wingmen} losses={flight.losses} /> 
                 })}
             </ul>
             ): (
@@ -18,6 +22,7 @@ function FlightLog() {
             )}
             <FlightForm/>
         </div>
+        </>
     )
 }
 

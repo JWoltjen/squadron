@@ -7,6 +7,11 @@ function Flight({flight}) {
         <div className='flight-card'>
             <h3 className='flight-card-date'>{flight.date}</h3>
             <p className='flight-card-description'>{flight.description}</p>
+            <ul className='flight-stats'>
+                <li>Kills: {flight.kills}</li>
+                <li>Wingmen: {flight.wingmen}</li>
+                <li>Losses: {flight.losses}</li>
+            </ul>
             <div className='flight-card-buttons'>
                 <button 
                     onClick={() => removeFlight(flight.id)} 

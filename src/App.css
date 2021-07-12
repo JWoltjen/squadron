@@ -3,84 +3,131 @@
   padding: 0;
 }
 
+/* Navbar */
+
 nav {
   display: flex;
+  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
   padding-left: 2rem;
   width: 100%;
+  min-height: 8vh;
   height: 8vh;
-  color: black;
-  font-weight: 800;
+  color: white;
   font-family: "Anton", sans-serif;
   font-size: smaller;
   background-color: rgb(235, 0, 35);
 }
 
-.nav-links {
+.logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 22px;
+}
+
+.links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  justify-content: space-around;
+  width: 75%;
   list-style-type: none;
 }
-.link {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 1rem;
-  font-size: small;
-  font-family: "Anton", sans-serif;
+.links a {
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
+.burger {
+  display: none;
+}
+.burger div {
+  width: 25px;
+  height: 5px;
+  color: black;
+  margin: 5px;
+  background-color: white;
+}
+
+/*home*/
+
 .main-container {
-  background-color: rgba(16, 60, 135, 0.885);
+  background-color: steelblue;
+  height: 85vh;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+}
+.home-container {
+  background-color: steelblue;
   height: 85vh;
   padding-bottom: 3rem;
   padding-top: 1rem;
 }
 
+/*FlightCard*/
+.flight-log-container {
+  background-color: steelblue;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .flight-card {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding: 2rem 1rem;
-  height: 20vh;
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+  height: 25vh;
+  min-height: 200px;
   width: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: 1px solid black;
+  border: 2px;
   border-radius: 5px;
   background-color: peachpuff;
   position: relative;
+  text-overflow: ellipsis;
+  overflow-y: scroll;
   z-index: 10;
+  box-shadow: 5px 5px 5px black;
 }
 
 .flight-card-date {
   position: absolute;
   top: 0.5rem;
   left: 1rem;
+  font-weight: bolder;
   font-family: "Inconsolata", monospace;
 }
 
 .flight-card-description {
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   display: flex;
-  justify-content: flex-start;
-  text-align: left;
   font-family: "Inconsolata", monospace;
 }
 .flight-card-buttons {
-  position: absolute;
-  bottom: 0.5rem;
-  left: 1rem;
-  height: 30px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+  font-family: "Inconsolata", monospace;
 }
+.flight-stats {
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-family: "Inconsolata", monospace;
+}
+
+/*flight form*/
 
 .flight-form {
   margin: 1rem 1rem;
   padding: 1rem 1rem;
-  height: 20vh;
+  height: 35vh;
+  min-height: 150px;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -90,6 +137,7 @@ nav {
   background-color: peachpuff;
   position: relative;
   z-index: 10;
+  box-shadow: 5px 5px 5px black;
 }
 .flight-form-description {
   height: 80%;
@@ -101,18 +149,32 @@ nav {
   padding: 0;
   width: 33%;
 }
+.flight-form-stats {
+  font-family: "Inconsolata", monospace;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: small;
+}
+.flight-form-buttons {
+  font-family: "Inconsolata", monospace;
+}
 .btn-delete-flight-btn {
   margin-right: 0.5rem;
   height: 30px;
   padding-left: 2px;
   padding-right: 2px;
+  font-family: "Inconsolata", monospace;
 }
 .btn-edit-flight-btn {
   margin-right: 0.5rem;
   height: 30px;
   padding-left: 2px;
   padding-right: 2px;
+  font-family: "Inconsolata", monospace;
 }
+
+/*squadron */
 
 .history-container {
   padding: 1rem 1rem;
@@ -129,7 +191,7 @@ nav {
   border-radius: 5px;
   background-color: wheat;
 }
-.notable-members {
+.members {
   margin-top: 1rem;
   padding-top: 1rem;
   padding-left: 2rem;
@@ -150,9 +212,73 @@ nav {
   margin-bottom: 1rem;
   padding-top: 0.5rem;
 }
+
 p {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(235, 0, 35);
+  height: 10vh;
+  align-items: center;
+  padding-left: 1rem;
+  font-family: "Anton", sans-serif;
+}
+
+.flight-log-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Anton", sans-serif;
+  color: white;
+  padding-left: 1rem;
+}
+
+.flight-form-header {
+  font-family: "Anton", sans-serif;
+  color: white;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .links {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .links {
+    position: absolute;
+    right: 0px;
+    height: 94vh;
+    top: 8vh;
+    background-color: rgb(235, 0, 35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    width: 33%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
 }

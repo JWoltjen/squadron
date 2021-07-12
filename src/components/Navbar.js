@@ -1,13 +1,26 @@
-import React from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import {Link} from 'react-router-dom'; 
+import {FlightListContext} from '../contexts/FlightContext'
 
 function Navbar() {
+    const {flights} = useContext(FlightListContext)
+    const [kills, setKills] = useState(flights.reduce((killTotal, currentFlight) => {
+                    killTotal += Number(currentFlight.kills)
+                    console.log(flights)
+                    return killTotal
+                }, 0))
+
+    const [losses, setLosses] = useState(flights.reduce((lossTotal, currentFlight) => {
+                        lossTotal += Number(currentFlight.losses)
+                        return lossTotal
+                    }, 0))
+    
     return (
         <nav>
-            <h3>Logo</h3>
-            <ul className='nav-links'>
-                <Link to ='/BRS'>
-                    <li className='link'>BRS</li>
+            <h3 className="logo">Logo</h3>
+            <ul className='links'>
+                <Link to ='/Squadron'>
+                    <li className='link'>Squadron</li>
                 </Link>
                 <Link to="/PhotoGallery">
                      <li className='link'>Photo Gallery</li>
@@ -15,7 +28,15 @@ function Navbar() {
                 <Link to='/FlightLog'>
                      <li className='link'>Flight Log</li>
                 </Link>
+                    <li className='link'>Flights: {flights.length}</li>
+                    <li className='link'> Kills: {kills}</li>
+                    <li className='link'> Losses: {losses}</li>
             </ul>
+            <div className='burger'>
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>
+            </div>
         </nav>
     )
 }
