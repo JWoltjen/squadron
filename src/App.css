@@ -39,6 +39,13 @@ nav {
   letter-spacing: 2px;
   font-weight: bold;
 }
+.burger div {
+  width: 25px;
+  height: 5px;
+  color: black;
+  margin: 5px;
+  background-color: white;
+}
 
 /*home*/
 

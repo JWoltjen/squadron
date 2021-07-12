@@ -28,6 +28,11 @@ function Navbar() {
                      <li className='link'>Flight Log</li>
                 </Link>
             </ul>
+            <div className='burger'>
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>
+            </div>
             <div className='stats'>
                 <h3>
                     Flights: {flights.length}
