@@ -5,9 +5,11 @@ import {FlightListContext} from '../contexts/FlightContext'
 function Navbar() {
     const {flights} = useContext(FlightListContext)
     const [kills, setKills] = useState(flights.reduce((killTotal, currentFlight) => {
-                    killTotal += currentFlight.kills
+                    killTotal += Number(currentFlight.kills)
+                    console.log(flights)
                     return killTotal
                 }, 0))
+
     const [losses, setLosses] = useState(flights.reduce((lossTotal, currentFlight) => {
                         lossTotal += currentFlight.losses
                         return lossTotal
