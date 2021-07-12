@@ -14,6 +14,7 @@ function Navbar() {
                         lossTotal += Number(currentFlight.losses)
                         return lossTotal
                     }, 0))
+    
     return (
         <nav>
             <h3 className="logo">Logo</h3>
@@ -27,22 +28,14 @@ function Navbar() {
                 <Link to='/FlightLog'>
                      <li className='link'>Flight Log</li>
                 </Link>
+                    <li className='link'>Flights: {flights.length}</li>
+                    <li className='link'> Kills: {kills}</li>
+                    <li className='link'> Losses: {losses}</li>
             </ul>
             <div className='burger'>
                 <div className="line1"></div>
                 <div className="line2"></div>
                 <div className="line3"></div>
-            </div>
-            <div className='stats'>
-                <h3>
-                    Flights: {flights.length}
-                </h3>
-                <h3>
-                    Kills: {kills}
-                </h3>
-                <h3>
-                    Losses: {losses}
-                </h3>
             </div>
         </nav>
     )

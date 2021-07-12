@@ -30,7 +30,8 @@ nav {
 .links {
   display: flex;
   justify-content: space-around;
-  width: 45%;
+  width: 75%;
+  list-style-type: none;
 }
 .links a {
   color: white;
@@ -38,6 +39,9 @@ nav {
   text-decoration: none;
   letter-spacing: 2px;
   font-weight: bold;
+}
+.burger {
+  display: none;
 }
 .burger div {
   width: 25px;
@@ -240,4 +244,41 @@ p {
   font-family: "Anton", sans-serif;
   color: white;
   padding-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .links {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .links {
+    position: absolute;
+    right: 0px;
+    height: 94vh;
+    top: 8vh;
+    background-color: rgb(235, 0, 35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    width: 33%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
 }
