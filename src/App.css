@@ -7,43 +7,20 @@
 
 nav {
   display: flex;
+  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
   padding-left: 2rem;
   width: 100%;
+  min-height: 8vh;
   height: 8vh;
-  color: black;
-  font-weight: 800;
+  color: white;
   font-family: "Anton", sans-serif;
   font-size: smaller;
   background-color: rgb(235, 0, 35);
 }
 
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  list-style-type: none;
-}
-.link {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 1rem;
-  font-size: small;
-  font-family: "Anton", sans-serif;
-}
-.nav-stats {
-  display: flex;
-  text-align: right;
-  padding-left: 1rem;
-}
-.nav-stat {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding-left: 1rem;
-  display: flex;
-  align-content: flex-end;
-}
+/*home*/
 
 .main-container {
   background-color: steelblue;
@@ -222,6 +199,7 @@ p {
   padding-left: 1rem;
   font-family: "Anton", sans-serif;
 }
+
 .flight-log-header {
   display: flex;
   flex-direction: row;

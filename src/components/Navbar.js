@@ -11,13 +11,13 @@ function Navbar() {
                 }, 0))
 
     const [losses, setLosses] = useState(flights.reduce((lossTotal, currentFlight) => {
-                        lossTotal += currentFlight.losses
+                        lossTotal += Number(currentFlight.losses)
                         return lossTotal
                     }, 0))
     return (
         <nav>
-            <h3>Logo</h3>
-            <ul className='nav-links'>
+            <h3 className="logo">Logo</h3>
+            <ul className='links'>
                 <Link to ='/Squadron'>
                     <li className='link'>Squadron</li>
                 </Link>
@@ -28,16 +28,16 @@ function Navbar() {
                      <li className='link'>Flight Log</li>
                 </Link>
             </ul>
-            <div className='nav-stats'>
-              <h3 className='nav-flight-stat'>
+            <div className='stats'>
+                <h3>
                     Flights: {flights.length}
                 </h3>
-            <h3 className='nav-flight-stat'>
-                Kills: {kills}
-            </h3>
-            <h3 className='nav-flight-stat'>
-                Losses: {losses}
-            </h3>
+                <h3>
+                    Kills: {kills}
+                </h3>
+                <h3>
+                    Losses: {losses}
+                </h3>
             </div>
         </nav>
     )
