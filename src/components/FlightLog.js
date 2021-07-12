@@ -14,7 +14,7 @@ function FlightLog() {
             {flights.length ? (
             <ul className='flight-log'>
                 {flights.map(flight => {
-                    return <Flight flight={flight} key={flight.id} description={flight.description} date={flight.date} /> 
+                    return <Flight flight={flight} key={flight.id} description={flight.description} date={flight.date} kills={flight.kills} wingmen={flight.wingmen} losses={flight.losses} /> 
                 })}
             </ul>
             ): (

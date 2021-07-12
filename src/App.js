@@ -7,8 +7,7 @@ import Navbar from './components/Navbar'
 import Squadron from './components/Squadron'
 import PhotoGallery from './components/PhotoGallery'
 import Home from './components/Home'
-
-
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -21,6 +20,7 @@ function App() {
       <Route path='/FlightLog' component={FlightLog}/>
     </Switch> 
   <Home/>
+  <Footer/>
   </Router>
 </FlightContextProvider>
   )
