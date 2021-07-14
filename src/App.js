@@ -8,7 +8,6 @@ import Squadron from './components/Squadron'
 import PhotoGallery from './components/PhotoGallery'
 import Home from './components/Home'
 import Footer from './components/Footer'
-
 function App() {
   return (
   <SquadronContextProvider>
