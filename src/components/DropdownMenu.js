@@ -21,19 +21,19 @@ const DropdownMenu = () => {
     return (
        <div className='menu-container'>
            <button onClick={onClick} className="menu-trigger">
-               <span>Hamburger</span>
+               <span></span>
            </button>
            <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
                <ul>
-                     <Link to ='/Squadron'>
-                    <li className='link'>Squadron</li>
-                </Link>
-                <Link to="/PhotoGallery">
-                     <li className='link'>Photo Gallery</li>
-                </Link>
-                <Link to='/FlightLog'>
-                     <li className='link'>Flight Log</li>
-                </Link>
+                    <Link to ='/Squadron'>
+                        <li className='link'>Squadron</li>
+                    </Link>
+                     <Link to="/PhotoGallery">
+                         <li className='link'>Photo Gallery</li>
+                    </Link>
+                     <Link to='/FlightLog'>
+                         <li className='link'>Flight Log</li>
+                     </Link>
                     <li className='link'>Flights: {flights.length}</li>
                     <li className='link'> Kills: {kills}</li>
                     <li className='link'> Losses: {losses}</li>
