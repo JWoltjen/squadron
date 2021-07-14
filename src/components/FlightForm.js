@@ -46,7 +46,6 @@ function FlightForm() {
             setWingmen(editItem.wingmen)
             setKills(editItem.kills)
             setLosses(editItem.losses)
-            console.log(editItem)
         } else {
             setDescription('')
         }

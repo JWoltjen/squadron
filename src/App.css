@@ -151,7 +151,9 @@ nav {
   height: 80%;
   background-color: peachpuff;
   border: none;
+  padding-top: 1rem;
   font-family: "Inconsolata", monospace;
+  font-size: larger;
 }
 .flight-form-date {
   padding: 0;
@@ -185,12 +187,16 @@ nav {
 /*Flight*/
 
 .flight-log-header {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 36px;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   font-family: "Anton", sans-serif;
   color: white;
-  padding-left: 1rem;
 }
 
 .flight-form-header {
@@ -204,6 +210,7 @@ nav {
   margin-bottom: 2rem;
   display: flex;
   font-family: "Inconsolata", monospace;
+  font-size: larger;
 }
 .flight-card-buttons {
   padding-left: 0.5rem;
