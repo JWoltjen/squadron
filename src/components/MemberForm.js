@@ -59,27 +59,35 @@ function MemberForm() {
             Enter new member: 
         </h3>
         <form onSubmit={handleSubmit} className='squadron-member-card'>
-            <input 
-                className='member-form-name' 
-                type='text' 
-                onChange={updateName}
-                placeholder='Enter Pilot Name'
-                required
-                />
-                 <input 
-                className='member-form-nationality' 
-                type='text' 
-                onChange={updateNationality}
-                placeholder='Enter Pilot Nationality'
-                required
-                />
-                <input 
-                className='member-form-rank' 
-                type='text' 
-                onChange={updateRank}
-                placeholder='Enter Pilot Rank'
-                required
-                />
+            <div className='input-wrapper'>
+                    <div className='member-form-image'>
+                        Photo
+                    </div>
+                    <div className='input-container'>
+                        <input 
+                            className='member-form-name' 
+                            type='text' 
+                            onChange={updateName}
+                            placeholder='Enter Pilot Name'
+                            required
+                            />
+                        
+                            <input 
+                            className='member-form-nationality' 
+                            type='text' 
+                            onChange={updateNationality}
+                            placeholder='Enter Pilot Nationality'
+                            required
+                            />
+                            <input 
+                            className='member-form-rank' 
+                            type='text' 
+                            onChange={updateRank}
+                            placeholder='Enter Pilot Rank'
+                            required
+                            />
+                            </div>
+                </div>
             <input type="text"
             onChange={handleChange}
             value={description}
