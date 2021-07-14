@@ -18,6 +18,7 @@ const SquadronContextProvider = props => {
     useEffect(() => {
         localStorage.setItem("squadron", JSON.stringify(members))
     }, [members])
+    
     const [editItem, setEditItem] = useState(null)
 
     const addMember = (name, image, nationality, rank, description) => {

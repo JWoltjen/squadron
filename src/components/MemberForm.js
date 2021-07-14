@@ -16,14 +16,16 @@ function MemberForm() {
     const handleSubmit = e => {
         e.preventDefault(); 
         // if(editItem === null){
-        //     addMember(name, nationality, rank, description)
-        //     setName('')
-        //     setNationality('')
-        //     setRank('')
-        //     setDescription('')
+            addMember(name, image, nationality, rank, description)
+            setName('')
+            setImage('')
+            setNationality('')
+            setRank('')
+            setDescription('')
         // } else {
         //     editMember(name, image, nationality, rank, description, editItem.id)
-    } 
+        // } 
+    }
     const updateNationality = e => {
         setNationality(e.target.value)
     }
@@ -37,12 +39,14 @@ function MemberForm() {
         setImage(e.target.value)
     }
 
+
     // useEffect(() => {
     //     if(editItem !==null){
-    //         setDescription(editItem.description)
     //         setName(editItem.name)
-    //         setNationality(editItem.nationality)
     //         setImage(editItem.image)
+    //         setNationality(editItem.nationality)
+    //         setRank(editItem.rank)
+    //         setDescription(editItem.description)
     //         console.log(editItem)
     //     } else {
     //         setDescription('')
@@ -79,53 +83,18 @@ function MemberForm() {
             <input type="text"
             onChange={handleChange}
             value={description}
-            className='flight-form-description'
+            className='member-form-description'
             placeholder='Add description'
             required
         />
-{/* 
-        <span className='flight-form-stats'>
-                <label for="kills">Kills</label>
-                <input 
-                    type='number' 
-                    id='kills' 
-                    name='kills' 
-                    min='0' 
-                    max='5' 
-                    value={kills} 
-                    onChange={updateKills}
-                    required
-                />
-                <label for='wingmen'>Wingmen</label>
-            <input 
-                type='number' 
-                id='wingmen' 
-                name='wingmen' 
-                min='0' 
-                max='4' 
-                value={wingmen} 
-                onChange={updateWingmen}
-                required
-            />
-                <label for='losses'>Losses</label>
-            <input 
-                type='number' 
-                id='losses' 
-                name='losses' 
-                min='0' 
-                max='4' 
-                value={losses} 
-                onChange={updateLosses}
-                required
-            />
-            </span> */}
 
             <div className='member-form-buttons'>
-                <button type='submit' className='btn-add-flight-btn'>Submit</button>
+                <button type='submit' className='btn-member-btn'>Submit</button>
             </div>
         </form>
         </>
     )
-}; 
+};  
+
 
 export default MemberForm
