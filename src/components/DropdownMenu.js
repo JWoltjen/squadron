@@ -21,7 +21,7 @@ const DropdownMenu = () => {
     return (
        <div className='menu-container'>
            <button onClick={onClick} className="menu-trigger">
-               <span>User</span>
+               <span>Hamburger</span>
            </button>
            <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
                <ul>
