@@ -68,7 +68,7 @@ function MemberForm() {
                             className='member-form-name' 
                             type='text' 
                             onChange={updateName}
-                            placeholder='Enter Pilot Name'
+                            placeholder='Name'
                             required
                             />
                         
@@ -76,14 +76,14 @@ function MemberForm() {
                             className='member-form-nationality' 
                             type='text' 
                             onChange={updateNationality}
-                            placeholder='Enter Pilot Nationality'
+                            placeholder='Nationality'
                             required
                             />
                             <input 
                             className='member-form-rank' 
                             type='text' 
                             onChange={updateRank}
-                            placeholder='Enter Pilot Rank'
+                            placeholder='Rank'
                             required
                             />
                             </div>

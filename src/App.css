@@ -289,32 +289,44 @@ nav {
   background-color: peachpuff;
   border: none;
   font-family: "Inconsolata", monospace;
+  font-size: x-large;
 }
 .member-form-name {
   font-family: "Inconsolata", monospace;
+  background-color: peachpuff;
+  border: none;
   padding-right: 0.5rem;
   margin-right: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: small;
+  font-size: x-large;
 }
 .member-form-image {
   border: 1px solid gray;
   height: 200px;
   width: 250px;
+  font-family: "Inconsolata", monospace;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .member-form-rank {
   font-family: "Inconsolata", monospace;
+  background-color: peachpuff;
+  border: none;
   padding-right: 0.5rem;
   margin-right: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: small;
+  font-size: x-large;
 }
 .member-form-nationality {
   font-family: "Inconsolata", monospace;
+  background-color: peachpuff;
+  border: none;
   padding-right: 0.5rem;
   margin-right: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: small;
+  font-size: x-large;
 }
 .member-form-buttons {
   font-family: "Inconsolata", monospace;
