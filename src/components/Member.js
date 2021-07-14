@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {SquadronListContext} from '../contexts/SquadronListContext'
+import {SquadronListContext} from '../contexts/SquadronContext'
 
 function Member({member}) {
     const {removeMember, findMember} = useContext(SquadronListContext)
