@@ -33,11 +33,7 @@ function Navbar() {
                     <li className='link'> Kills: {kills}</li>
                     <li className='link'> Losses: {losses}</li>
             </ul>
-            <div className='burger'>
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
-            </div>
+            <DropdownMenu/>
         </nav>
     )
 }
