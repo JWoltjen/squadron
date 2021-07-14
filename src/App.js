@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import FlightLog from './components/FlightLog'
 import FlightContextProvider from './contexts/FlightContext'
 import SquadronContextProvider from './contexts/SquadronContext'
-
-import FlightForm from './components/FlightForm'
 import Navbar from './components/Navbar'
 import Squadron from './components/Squadron'
 import PhotoGallery from './components/PhotoGallery'

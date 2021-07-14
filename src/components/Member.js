@@ -6,14 +6,10 @@ function Member({member}) {
     return (
        <div className='squadron-member-card'>
                 <h1 className='squadron-member-name'>{member.name}</h1>
+                <div className='squadron-member-image'>{member.image}</div>
                 <h5 className='squadron-member-nationality'>{member.nationality}</h5>
                 <h5 className='squadron-rank'>{member.rank}</h5>
                 <p className='squadron-description'>{member.description}</p>
-            {/* <ul className='flight-stats'>
-                <li>Kills: {flight.kills}</li>
-                <li>Wingmen: {flight.wingmen}</li>
-                <li>Losses: {flight.losses}</li>
-            </ul> */}
             <div className='flight-card-buttons'>
                 <button 
                     onClick={() => removeMember(member.id)} 

@@ -3,7 +3,6 @@ import {v4 as uuidv4} from 'uuid'
 
 export const SquadronListContext = createContext() 
 
-
 const SquadronContextProvider = props => {
         const initialState = JSON.parse(localStorage.getItem('squadron')) ||
         {
