@@ -64,7 +64,7 @@ function FlightForm() {
                 onChange={updateDate}
                 required
                 />
-            <input type="text"
+            <textarea
             onChange={handleChange}
             value={description}
             className='flight-form-description'

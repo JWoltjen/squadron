@@ -143,6 +143,7 @@ nav {
   border-radius: 5px;
   background-color: peachpuff;
   position: relative;
+  word-wrap: normal;
   z-index: 10;
   box-shadow: 5px 5px 5px black;
 }

@@ -88,7 +88,7 @@ function MemberForm() {
                             />
                             </div>
                 </div>
-            <input type="text"
+            <textarea
             onChange={handleChange}
             value={description}
             className='member-form-description'
