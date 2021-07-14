@@ -266,6 +266,10 @@ nav {
 /*SQUADRON FORM*/
 
 .member-form-header {
+  padding-top: 2rem;
+  font-family: "Anton", sans-serif;
+  color: white;
+  padding-left: 1rem;
 }
 
 .squadron-member-card {
@@ -329,6 +333,7 @@ nav {
   font-size: x-large;
 }
 .member-form-buttons {
+  padding-top: 2rem;
   font-family: "Inconsolata", monospace;
 }
 .btn-member-btn {
