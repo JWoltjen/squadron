@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 /* Navbar */
 
 nav {
@@ -175,22 +182,6 @@ nav {
 }
 
 /*squadron */
-
-.history-container {
-  padding: 1rem 1rem;
-  height: 200%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  background-color: steelblue;
-  font-family: "Tinos", serif;
-}
-.history-card {
-  padding: 0.5rem 0.5rem;
-  border: 3px solid white;
-  border-radius: 5px;
-  background-color: wheat;
-}
 .members {
   margin-top: 1rem;
   padding-top: 1rem;
@@ -204,21 +195,8 @@ nav {
   border-radius: 5px;
   background-color: wheat;
 }
-.history-title {
-  margin-bottom: 1rem;
-}
-.history-subtitle {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-top: 0.5rem;
-}
 
-p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
+/*misc*/
 
 .footer {
   display: flex;
@@ -244,6 +222,56 @@ p {
   font-family: "Anton", sans-serif;
   color: white;
   padding-left: 1rem;
+}
+
+.squadron-container {
+  background-color: steelblue;
+  padding: 1rem;
+}
+.squadron-member-card {
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+  height: 25vh;
+  min-height: 200px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 2px;
+  border-radius: 5px;
+  background-color: peachpuff;
+  position: relative;
+  text-overflow: ellipsis;
+  overflow-y: scroll;
+  z-index: 10;
+  box-shadow: 5px 5px 5px black;
+}
+
+.squadron-card-nationality {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-weight: bolder;
+  font-family: "Inconsolata", monospace;
+}
+.squadron-card-nationality {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-weight: bolder;
+  font-family: "Inconsolata", monospace;
+}
+
+.flight-card-description {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  font-family: "Inconsolata", monospace;
+}
+.flight-card-buttons {
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+  font-family: "Inconsolata", monospace;
 }
 
 @media screen and (max-width: 768px) {
@@ -277,59 +305,7 @@ p {
     display: block;
     cursor: pointer;
   }
-
   .nav-active {
     transform: translateX(0%);
-  }
-
-  .squadron-container {
-    background-color: steelblue;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  .squadron-member-card {
-    margin: 1rem 1rem;
-    padding: 1rem 1rem;
-    height: 25vh;
-    min-height: 200px;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border: 2px;
-    border-radius: 5px;
-    background-color: peachpuff;
-    position: relative;
-    text-overflow: ellipsis;
-    overflow-y: scroll;
-    z-index: 10;
-    box-shadow: 5px 5px 5px black;
-  }
-
-  .squadron-card-nationality {
-    position: absolute;
-    top: 0.5rem;
-    left: 1rem;
-    font-weight: bolder;
-    font-family: "Inconsolata", monospace;
-  }
-  .squadron-card-nationality {
-    position: absolute;
-    top: 0.5rem;
-    left: 1rem;
-    font-weight: bolder;
-    font-family: "Inconsolata", monospace;
-  }
-
-  .flight-card-description {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: flex;
-    font-family: "Inconsolata", monospace;
-  }
-  .flight-card-buttons {
-    padding-left: 0.5rem;
-    padding-bottom: 1rem;
-    font-family: "Inconsolata", monospace;
   }
 }

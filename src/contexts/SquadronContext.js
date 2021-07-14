@@ -9,6 +9,7 @@ const SquadronContextProvider = props => {
         {
             id: uuidv4(),
             name: 'Wolf', 
+            img: '',
             nationality: "Unite States", 
             rank: 'Captain', 
             description: 'Wolf is me.', 
