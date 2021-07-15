@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 /* Navbar */
 
 nav {
@@ -136,6 +143,7 @@ nav {
   border-radius: 5px;
   background-color: peachpuff;
   position: relative;
+  word-wrap: normal;
   z-index: 10;
   box-shadow: 5px 5px 5px black;
 }
@@ -143,7 +151,9 @@ nav {
   height: 80%;
   background-color: peachpuff;
   border: none;
+  padding-top: 1rem;
   font-family: "Inconsolata", monospace;
+  font-size: larger;
 }
 .flight-form-date {
   padding: 0;
@@ -174,22 +184,45 @@ nav {
   font-family: "Inconsolata", monospace;
 }
 
-/*squadron */
+/*Flight*/
 
-.history-container {
-  padding: 1rem 1rem;
-  height: 200%;
+.flight-log-header {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 36px;
+
   display: flex;
-  flex-direction: column;
-  align-content: center;
-  background-color: steelblue;
-  font-family: "Tinos", serif;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Anton", sans-serif;
+  color: white;
 }
-.history-card {
-  padding: 0.5rem 0.5rem;
-  border: 3px solid white;
-  border-radius: 5px;
-  background-color: wheat;
+
+.flight-form-header {
+  font-family: "Anton", sans-serif;
+  color: white;
+  padding-left: 1rem;
+}
+
+.flight-card-description {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  font-family: "Inconsolata", monospace;
+  font-size: larger;
+}
+.flight-card-buttons {
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+  font-family: "Inconsolata", monospace;
+}
+
+/*SQUADRON*/
+
+.squadron-container {
+  background-color: steelblue;
+  padding: 1rem;
 }
 .members {
   margin-top: 1rem;
@@ -204,21 +237,138 @@ nav {
   border-radius: 5px;
   background-color: wheat;
 }
-.history-title {
-  margin-bottom: 1rem;
-}
-.history-subtitle {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-top: 0.5rem;
+.squadron-member-card {
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+  height: 25vh;
+  min-height: 200px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 2px;
+  border-radius: 5px;
+  background-color: peachpuff;
+  position: relative;
+  text-overflow: ellipsis;
+  overflow-y: scroll;
+  z-index: 10;
+  box-shadow: 5px 5px 5px black;
 }
 
-p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.squadron-card-nationality {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-weight: bolder;
+  font-family: "Inconsolata", monospace;
 }
+.squadron-card-nationality {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-weight: bolder;
+  font-family: "Inconsolata", monospace;
+}
+
+/*SQUADRON FORM*/
+
+.member-form-header {
+  padding-top: 2rem;
+  font-family: "Anton", sans-serif;
+  color: white;
+  padding-left: 1rem;
+}
+
+.squadron-member-card {
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+  height: 66vh;
+  min-height: 250px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: peachpuff;
+  position: relative;
+  z-index: 10;
+  box-shadow: 5px 5px 5px black;
+}
+.member-form-description {
+  height: 80%;
+  background-color: peachpuff;
+  border: none;
+  font-family: "Inconsolata", monospace;
+  font-size: x-large;
+}
+.member-form-name {
+  font-family: "Inconsolata", monospace;
+  background-color: peachpuff;
+  border: none;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: x-large;
+}
+.member-form-image {
+  border: 1px solid gray;
+  height: 200px;
+  width: 250px;
+  font-family: "Inconsolata", monospace;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.member-form-rank {
+  font-family: "Inconsolata", monospace;
+  background-color: peachpuff;
+  border: none;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: x-large;
+}
+.member-form-nationality {
+  font-family: "Inconsolata", monospace;
+  background-color: peachpuff;
+  border: none;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: x-large;
+}
+.member-form-buttons {
+  padding-top: 2rem;
+  font-family: "Inconsolata", monospace;
+}
+.btn-member-btn {
+  margin-right: 0.5rem;
+  height: 30px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: "Inconsolata", monospace;
+}
+.input-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: left;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 30%;
+  min-width: 15rem;
+  justify-content: right;
+  align-items: right;
+}
+
+/*misc*/
 
 .footer {
   display: flex;
@@ -231,19 +381,74 @@ p {
   font-family: "Anton", sans-serif;
 }
 
-.flight-log-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-family: "Anton", sans-serif;
+.menu-container {
+  position: relative;
+}
+.menu {
+  position: absolute;
+  border-radius: 8px;
+  background: #ffff;
+  top: 60px;
+  right: 0px;
+  width: 150px;
+  height: 500px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease, transform 0.4s ease, visibility 0.4s;
+}
+.menu.active {
+  opacity: 1;
+  background-color: rgb(235, 0, 35);
+
+  visibility: visible;
+  transform: translateY(0);
+  z-index: 100;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
   color: white;
-  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: large;
+}
+.menu li a {
+  text-decoration: none;
+  color: #333333;
+  display: block;
+}
+.menu-trigger {
+  background: #ffffff;
+  border-radius: 90px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border: none;
+  vertical-align: middle;
+  transition: box-shadow 0.4s ease;
 }
 
-.flight-form-header {
-  font-family: "Anton", sans-serif;
-  color: white;
-  padding-left: 1rem;
+.menu-trigger:hover {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-trigger span {
+  font-weight: 700;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.menu-trigger img {
+  border-radius: 90px;
 }
 
 @media screen and (max-width: 768px) {
@@ -270,15 +475,8 @@ p {
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
-  .links li {
-    opacity: 0;
-  }
   .burger {
     display: block;
     cursor: pointer;
-  }
-
-  .nav-active {
-    transform: translateX(0%);
   }
 }

@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react'
 import {Link} from 'react-router-dom'; 
 import {FlightListContext} from '../contexts/FlightContext'
+import DropdownMenu from './DropdownMenu'
 
 function Navbar() {
     const {flights} = useContext(FlightListContext)
@@ -17,7 +18,7 @@ function Navbar() {
     
     return (
         <nav>
-            <h3 className="logo">Logo</h3>
+            <h3 className="logo">=Squadron=</h3>
             <ul className='links'>
                 <Link to ='/Squadron'>
                     <li className='link'>Squadron</li>
@@ -32,11 +33,7 @@ function Navbar() {
                     <li className='link'> Kills: {kills}</li>
                     <li className='link'> Losses: {losses}</li>
             </ul>
-            <div className='burger'>
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
-            </div>
+            <DropdownMenu/>
         </nav>
     )
 }

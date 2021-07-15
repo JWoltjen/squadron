@@ -46,7 +46,6 @@ function FlightForm() {
             setWingmen(editItem.wingmen)
             setKills(editItem.kills)
             setLosses(editItem.losses)
-            console.log(editItem)
         } else {
             setDescription('')
         }
@@ -64,7 +63,7 @@ function FlightForm() {
                 onChange={updateDate}
                 required
                 />
-            <input type="text"
+            <textarea
             onChange={handleChange}
             value={description}
             className='flight-form-description'
