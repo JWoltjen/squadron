@@ -15,16 +15,16 @@ function MemberForm() {
     }
     const handleSubmit = e => {
         e.preventDefault(); 
-        // if(editItem === null){
+        if(editItem === null){
             addMember(name, image, nationality, rank, description)
             setName('')
             setImage('')
             setNationality('')
             setRank('')
             setDescription('')
-        // } else {
-        //     editMember(name, image, nationality, rank, description, editItem.id)
-        // } 
+        } else {
+            editMember(name, image, nationality, rank, description, editItem.id)
+        } 
     }
     const updateNationality = e => {
         setNationality(e.target.value)
@@ -40,18 +40,18 @@ function MemberForm() {
     }
 
 
-    // useEffect(() => {
-    //     if(editItem !==null){
-    //         setName(editItem.name)
-    //         setImage(editItem.image)
-    //         setNationality(editItem.nationality)
-    //         setRank(editItem.rank)
-    //         setDescription(editItem.description)
-    //         console.log(editItem)
-    //     } else {
-    //         setDescription('')
-    //     }
-    // }, [editItem]); 
+    useEffect(() => {
+        if(editItem !==null){
+            setName(editItem.name)
+            setImage(editItem.image)
+            setNationality(editItem.nationality)
+            setRank(editItem.rank)
+            setDescription(editItem.description)
+            console.log(editItem)
+        } else {
+            setDescription('')
+        }
+    }, [editItem]); 
 
     return (
         <>

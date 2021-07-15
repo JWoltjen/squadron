@@ -4,25 +4,25 @@ import {v4 as uuidv4} from 'uuid'
 export const SquadronListContext = createContext() 
 
 const SquadronContextProvider = props => {
-        const initialState = JSON.parse(localStorage.getItem('squadron')) ||
-        {
+        const initialState = 
+        [{
             id: uuidv4(),
             name: 'Wolf', 
             img: '',
-            nationality: "Unite States", 
+            nationality: "United States", 
             rank: 'Captain', 
             description: 'Wolf is me.', 
-        }
+        }]
     const [members, setMembers] = useState(initialState)
 
     useEffect(() => {
-        localStorage.setItem("squadron", JSON.stringify(members))
+        localStorage.setItem("members", JSON.stringify(members))
     }, [members])
     
     const [editItem, setEditItem] = useState(null)
 
     const addMember = (name, image, nationality, rank, description) => {
-        setMembers([...members, {id: uuidv4(), name: name, image: image, nationality: nationality, rank: rank, description: description, }])
+        setMembers([...members, {id: uuidv4(), name: name, image: image, nationality: nationality, rank: rank, description: description}])
     };
 
     const removeMember = id => {
@@ -42,7 +42,7 @@ const SquadronContextProvider = props => {
         setEditItem(null)
     }
   return (
-        <SquadronListContext.Provider value={{members}}>
+        <SquadronListContext.Provider value={{members, addMember, removeMember, clearList, findMember, editMember, editItem}}>
             {props.children}
         </SquadronListContext.Provider>
     )

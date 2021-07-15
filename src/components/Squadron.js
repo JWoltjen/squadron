@@ -1,11 +1,16 @@
 import React, {useState, useContext} from 'react'
+import { FileDrop } from 'react-file-drop'
 import {SquadronListContext} from '../contexts/SquadronContext'
 import Member from './Member'
 import MemberForm from './MemberForm'
 
 function Squadron() {
     const {members} = useContext(SquadronListContext)
+    const showMembers = () => {
+        console.log(members)
+    }
     return (
+        <>
         <div className='squadron-container'>
             {members.length ? (
             <ul className='flight-log'>
@@ -14,10 +19,11 @@ function Squadron() {
                 })}
             </ul>
             ): (
-                <div className="no-flights">No Members</div>
+                <div className="no-flights" onClick={showMembers}>No Members</div>
             )}
             <MemberForm/>
         </div>
+        </>
     )
 }
 
