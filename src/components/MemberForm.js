@@ -62,6 +62,13 @@ function MemberForm() {
             <div className='input-wrapper'>
                     <div className='member-form-image'>
                         Photo
+                         <input
+                            className='member-form-image-input'
+                            type='text'
+                            onChange={updateImage}
+                            placeholder='Enter image url'
+                            required
+                        />
                     </div>
                     <div className='input-container'>
                         <input 

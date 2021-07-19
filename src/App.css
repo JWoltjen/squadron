@@ -237,24 +237,6 @@ nav {
   border-radius: 5px;
   background-color: wheat;
 }
-.squadron-member-card {
-  margin: 1rem 1rem;
-  padding: 1rem 1rem;
-  height: 25vh;
-  min-height: 200px;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border: 2px;
-  border-radius: 5px;
-  background-color: peachpuff;
-  position: relative;
-  text-overflow: ellipsis;
-  overflow-y: scroll;
-  z-index: 10;
-  box-shadow: 5px 5px 5px black;
-}
 
 .squadron-card-nationality {
   position: absolute;
@@ -321,6 +303,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.member-form-image-input {
 }
 .member-form-rank {
   font-family: "Inconsolata", monospace;
