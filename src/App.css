@@ -113,8 +113,9 @@ nav {
   font-family: "Inconsolata", monospace;
 }
 .flight-card-buttons {
-  padding-left: 0.5rem;
-  padding-bottom: 1rem;
+  position: absolute;
+  left: 0.5rem;
+  bottom: 1rem;
   font-family: "Inconsolata", monospace;
 }
 .flight-stats {
@@ -223,6 +224,7 @@ nav {
 .squadron-container {
   background-color: steelblue;
   padding: 1rem;
+  font-family: "Inconsolata", monospace;
 }
 .members {
   margin-top: 1rem;
@@ -243,14 +245,12 @@ nav {
   top: 0.5rem;
   left: 1rem;
   font-weight: bolder;
-  font-family: "Inconsolata", monospace;
 }
 .squadron-card-nationality {
   position: absolute;
   top: 0.5rem;
   left: 1rem;
   font-weight: bolder;
-  font-family: "Inconsolata", monospace;
 }
 
 /*SQUADRON FORM*/
@@ -278,6 +278,7 @@ nav {
   z-index: 10;
   box-shadow: 5px 5px 5px black;
 }
+
 .member-form-description {
   height: 80%;
   background-color: peachpuff;

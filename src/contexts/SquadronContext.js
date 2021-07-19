@@ -8,10 +8,10 @@ const SquadronContextProvider = props => {
         [{
             id: uuidv4(),
             name: 'Wolf', 
-            img: '',
+            image: 'https://www.langleyadvancetimes.com/wp-content/uploads/2017/04/5907langleymiller-vintage.jpg',
             nationality: "United States", 
             rank: 'Captain', 
-            description: 'Wolf is me.', 
+            description: 'Founding member of the Bloody Red Squadron.', 
         }]
     const [members, setMembers] = useState(initialState)
 
