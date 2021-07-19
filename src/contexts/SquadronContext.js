@@ -12,6 +12,11 @@ const SquadronContextProvider = props => {
             nationality: "United States", 
             rank: 'Captain', 
             description: 'Founding member of the Bloody Red Squadron.', 
+            eyesight: 5,
+            awareness: 5, 
+            aggression: 5, 
+            communication: 3, 
+            gunnery: 2
         }]
     const [members, setMembers] = useState(initialState)
 
@@ -21,8 +26,8 @@ const SquadronContextProvider = props => {
     
     const [editItem, setEditItem] = useState(null)
 
-    const addMember = (name, image, nationality, rank, description) => {
-        setMembers([...members, {id: uuidv4(), name: name, image: image, nationality: nationality, rank: rank, description: description}])
+    const addMember = (name, image, nationality, rank, description, eyesight, awareness, aggression, communication, gunnery) => {
+        setMembers([...members, {id: uuidv4(), name: name, image: image, nationality: nationality, rank: rank, description: description, eyesight: eyesight, awareness: awareness, aggression: aggression, communication: communication, gunnery: gunnery}])
     };
 
     const removeMember = id => {
@@ -36,8 +41,8 @@ const SquadronContextProvider = props => {
         const item = members.find(member => member.id === id)
         setEditItem(item)
     }
-    const editMember = (id, name, image, nationality, rank, description) => {
-        const newMembers = members.map(member => (member.id === id ? {name, image, nationality, rank, description} : member))
+    const editMember = (id, name, image, nationality, rank, description, eyesight, awareness, aggression, communication, gunnery) => {
+        const newMembers = members.map(member => (member.id === id ? {name, image, nationality, rank, description, eyesight, awareness, aggression, communication, gunnery} : member))
         setMembers(newMembers)
         setEditItem(null)
     }

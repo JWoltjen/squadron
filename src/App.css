@@ -257,7 +257,6 @@ nav {
 .squadron-member-card {
   margin: 1rem 1rem;
   padding: 1rem 1rem;
-  height: 66vh;
   min-height: 250px;
   width: auto;
   display: flex;
@@ -333,6 +332,10 @@ nav {
   margin-right: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: x-large;
+}
+.member-stats {
+  list-style-type: none;
+  padding-top: 1rem;
 }
 .member-form-buttons {
   padding-top: 2rem;
