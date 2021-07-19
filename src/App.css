@@ -3,15 +3,6 @@
   padding: 0;
 }
 
-p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-/* Navbar */
-
 nav {
   display: flex;
   justify-content: space-around;
@@ -37,7 +28,6 @@ nav {
 .links {
   display: flex;
   justify-content: space-around;
-  width: 75%;
   list-style-type: none;
 }
 .links a {
@@ -55,22 +45,25 @@ nav {
   height: 5px;
   color: black;
   margin: 5px;
-  background-color: white;
 }
 
 /*home*/
 
 .main-container {
   background-color: steelblue;
-  height: 85vh;
   padding-bottom: 3rem;
+  height: 100vh;
   padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 .home-container {
   background-color: steelblue;
-  height: 85vh;
   padding-bottom: 3rem;
+  height: 100vh;
   padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 /*FlightCard*/
@@ -113,7 +106,6 @@ nav {
   font-family: "Inconsolata", monospace;
 }
 .flight-card-buttons {
-  position: absolute;
   left: 0.5rem;
   bottom: 1rem;
   font-family: "Inconsolata", monospace;
@@ -297,8 +289,10 @@ nav {
 }
 .member-form-image {
   border: 1px solid gray;
-  height: 200px;
-  width: 250px;
+  height: 250px;
+  max-height: 300px;
+  max-width: 250px;
+  height: auto;
   font-family: "Inconsolata", monospace;
   font-size: x-large;
   display: flex;
@@ -306,8 +300,22 @@ nav {
   align-items: center;
   flex-direction: column;
 }
-.member-form-image-input {
+.member-description-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
+.member-form-image-container {
+  border: 1px solid gray;
+  height: 250px;
+  max-width: 300px;
+  font-family: "Inconsolata", monospace;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .member-form-rank {
   font-family: "Inconsolata", monospace;
   background-color: peachpuff;

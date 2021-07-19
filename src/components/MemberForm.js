@@ -60,7 +60,7 @@ function MemberForm() {
         </h3>
         <form onSubmit={handleSubmit} className='squadron-member-card'>
             <div className='input-wrapper'>
-                    <div className='member-form-image'>
+                    <div className='member-form-image-container'>
                         Photo
                          <input
                             className='member-form-image-input'
