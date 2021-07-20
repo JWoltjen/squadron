@@ -9,7 +9,7 @@ function MemberForm() {
     const [description, setDescription] = useState('')
     const [nationality, setNationality] = useState('')
     const [rank, setRank] = useState('')
-    const [eyeSight, setEyeSight] = useState(0)
+    const [eyesight, setEyeSight] = useState(0)
     const [awareness, setAwareness] = useState(0)
     const [aggression, setAggression] = useState(0)
     const [communication, setCommunication] = useState(0)
@@ -21,7 +21,7 @@ function MemberForm() {
     const handleSubmit = e => {
         e.preventDefault(); 
         if(editItem === null){
-            addMember(name, image, nationality, rank, description, eyeSight, awareness, aggression, communication, gunnery)
+            addMember(name, image, nationality, rank, description, eyesight, awareness, aggression, communication, gunnery)
             setName('')
             setImage('')
             setNationality('')
@@ -33,7 +33,7 @@ function MemberForm() {
             setCommunication(0)
             setGunnery(0)
         } else {
-            editMember(name, image, nationality, rank, description, eyeSight, awareness, aggression, communication, gunnery, editItem.id)
+            editMember(name, image, nationality, rank, description, eyesight, awareness, aggression, communication, gunnery, editItem.id)
         } 
     }
     const updateNationality = e => {
@@ -72,7 +72,7 @@ function MemberForm() {
             setNationality(editItem.nationality)
             setRank(editItem.rank)
             setDescription(editItem.description)
-            setEyeSight(editItem.eyeSight)
+            setEyeSight(editItem.eyesight)
             setAwareness(editItem.awareness)
             setAggression(editItem.aggression)
             setCommunication(editItem.communication)
@@ -111,6 +111,7 @@ function MemberForm() {
                             <input 
                             className='member-form-nationality' 
                             type='text' 
+                            value={nationality}
                             onChange={updateNationality}
                             placeholder='Nationality'
                             required
@@ -118,12 +119,14 @@ function MemberForm() {
                             <input 
                             className='member-form-rank' 
                             type='text' 
+                            value={rank}
                             onChange={updateRank}
                             placeholder='Rank'
                             required
                             />
                             <input 
                             type='range'
+                            value={eyesight}
                             onChange={updateEyeSight}
                             placeholder='Eyesight'
                             min="0"
@@ -132,6 +135,7 @@ function MemberForm() {
                             />
                             <input 
                             type='range'
+                            value={awareness}
                             onChange={updateAwareness}
                             placeholder='Awareness'
                             min="0"
@@ -140,6 +144,7 @@ function MemberForm() {
                             />
                             <input 
                             type='range'
+                            value={aggression}
                             onChange={updateAggression}
                             placeholder="Aggression"
                             min="0"
@@ -148,6 +153,7 @@ function MemberForm() {
                             />
                             <input
                             type='range'
+                            value={communication}
                             onChange={updateCommunication}
                             placeholder='Communication'
                             min="0"
@@ -156,6 +162,7 @@ function MemberForm() {
                             />
                             <input 
                             type='range'
+                            value={gunnery}
                             onChange={updateGunnery}
                             placeholder='Gunnery'
                             min="0"
