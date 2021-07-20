@@ -58,7 +58,7 @@ function MemberForm() {
         <h3 className='member-form-header'>
             Enter new member: 
         </h3>
-        <form onSubmit={handleSubmit} className='squadron-member-card'>
+        <form onSubmit={handleSubmit} className='squadron-member-card-form'>
             <div className='input-wrapper'>
                     <div className='member-form-image-container'>
                         Photo

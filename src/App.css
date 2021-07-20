@@ -105,11 +105,7 @@ nav {
   display: flex;
   font-family: "Inconsolata", monospace;
 }
-.flight-card-buttons {
-  left: 0.5rem;
-  bottom: 1rem;
-  font-family: "Inconsolata", monospace;
-}
+
 .flight-stats {
   padding-left: 0.5rem;
   padding-right: 1rem;
@@ -206,8 +202,8 @@ nav {
   font-size: larger;
 }
 .flight-card-buttons {
-  padding-left: 0.5rem;
-  padding-bottom: 1rem;
+  position: absolute;
+  bottom: 1rem;
   font-family: "Inconsolata", monospace;
 }
 
@@ -232,19 +228,6 @@ nav {
   background-color: wheat;
 }
 
-.squadron-card-nationality {
-  position: absolute;
-  top: 0.5rem;
-  left: 1rem;
-  font-weight: bolder;
-}
-.squadron-card-nationality {
-  position: absolute;
-  top: 0.5rem;
-  left: 1rem;
-  font-weight: bolder;
-}
-
 /*SQUADRON FORM*/
 
 .member-form-header {
@@ -254,13 +237,34 @@ nav {
   padding-left: 1rem;
 }
 
+.squadron-member-card-form {
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+  min-height: 250px;
+  max-width: 80%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: peachpuff;
+  position: relative;
+  z-index: 10;
+  box-shadow: 5px 5px 5px black;
+}
+.wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .squadron-member-card {
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   min-height: 250px;
+  max-width: 80%;
   width: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   border: 1px solid black;
   border-radius: 5px;
@@ -300,8 +304,10 @@ nav {
   flex-direction: column;
 }
 .member-description-container {
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
+  font-family: "Inconsolata", monospace;
+  font-size: large;
 }
 .member-form-image-container {
   border: 1px solid gray;
@@ -328,14 +334,16 @@ nav {
   font-family: "Inconsolata", monospace;
   background-color: peachpuff;
   border: none;
+  padding-top: 1rem;
   padding-right: 0.5rem;
   margin-right: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
   font-size: x-large;
 }
 .member-stats {
   list-style-type: none;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .member-form-buttons {
   padding-top: 2rem;
@@ -446,6 +454,24 @@ nav {
 
 .menu-trigger img {
   border-radius: 90px;
+}
+@media screen and (max-width: 500px) {
+  .squadron-member-card {
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
+    min-height: 250px;
+    max-width: 80%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: peachpuff;
+    position: relative;
+    z-index: 10;
+    box-shadow: 5px 5px 5px black;
+  }
 }
 
 @media screen and (max-width: 768px) {
