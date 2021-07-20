@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
 }
+p {
+  margin: 0;
+  overflow: hidden;
+  overscroll-behavior-y: auto;
+}
 
 nav {
   display: flex;
@@ -296,7 +301,7 @@ nav {
 .member-form-image {
   border: 1px solid gray;
   height: 250px;
-  max-height: 300px;
+  max-height: 350px;
   max-width: 250px;
   height: auto;
   font-family: "Inconsolata", monospace;
@@ -311,6 +316,7 @@ nav {
   padding-bottom: 1rem;
   font-family: "Inconsolata", monospace;
   font-size: large;
+  overscroll-behavior-y: auto;
 }
 .member-form-image-container {
   border: 1px solid gray;
