@@ -4,7 +4,6 @@
 }
 p {
   margin: 0;
-  overflow: hidden;
   overscroll-behavior-y: auto;
 }
 
@@ -90,7 +89,6 @@ nav {
   border-radius: 5px;
   background-color: peachpuff;
   position: relative;
-  text-overflow: ellipsis;
   overflow-y: scroll;
   z-index: 10;
   box-shadow: 5px 5px 5px black;
@@ -207,7 +205,6 @@ nav {
   font-size: larger;
 }
 .flight-card-buttons {
-  position: absolute;
   bottom: 1rem;
   font-family: "Inconsolata", monospace;
 }
