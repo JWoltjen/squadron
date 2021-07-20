@@ -273,6 +273,9 @@ nav {
   z-index: 10;
   box-shadow: 5px 5px 5px black;
 }
+.squadron-description {
+  padding-bottom: 2rem;
+}
 
 .member-form-description {
   height: 80%;
