@@ -133,6 +133,7 @@ function MemberForm() {
                             max='5'
                             required
                             />
+                            Eyesight: {eyesight}
                             <input 
                             type='range'
                             value={awareness}
@@ -142,6 +143,7 @@ function MemberForm() {
                             max='5'
                             required
                             />
+                            Situational Awareness: {awareness}
                             <input 
                             type='range'
                             value={aggression}
@@ -151,6 +153,7 @@ function MemberForm() {
                             max='5'
                             required
                             />
+                            Aggression: {aggression}
                             <input
                             type='range'
                             value={communication}
@@ -160,6 +163,7 @@ function MemberForm() {
                             max='5'
                             required
                             />
+                            Communication: {communication}
                             <input 
                             type='range'
                             value={gunnery}
@@ -169,6 +173,7 @@ function MemberForm() {
                             max='5'
                             required
                             />
+                            Gunnery: {gunnery}
                             </div>
                 </div>
             <textarea
