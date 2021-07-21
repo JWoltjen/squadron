@@ -12,7 +12,6 @@ nav {
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  padding-left: 2rem;
   width: 100%;
   min-height: 8vh;
   height: 8vh;
@@ -34,11 +33,19 @@ nav {
   justify-content: space-around;
   list-style-type: none;
 }
+.link {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding-right: 1rem;
+}
 .links a {
   color: white;
   list-style-type: none;
   text-decoration: none;
   letter-spacing: 2px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-weight: bold;
 }
 .burger {
@@ -482,11 +489,11 @@ nav {
 
 @media screen and (max-width: 768px) {
   .links {
-    width: 40%;
+    width: 50%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
   }
@@ -498,7 +505,7 @@ nav {
     background-color: rgb(235, 0, 35);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: space-around;
     z-index: 100;
     width: 33%;
     transform: translateX(100%);

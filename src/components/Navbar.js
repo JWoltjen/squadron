@@ -18,7 +18,7 @@ function Navbar() {
     
     return (
         <nav>
-            <h3 className="logo">=Squadron=</h3>
+            <h3 className="logo">=Squadron= </h3>
             <ul className='links'>
                 <Link to ='/Squadron'>
                     <li className='link'>Squadron</li>
