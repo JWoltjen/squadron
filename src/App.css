@@ -2,22 +2,16 @@
   margin: 0;
   padding: 0;
 }
-
 p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  margin: 0;
+  overscroll-behavior-y: auto;
 }
-
-/* Navbar */
 
 nav {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  padding-left: 2rem;
   width: 100%;
   min-height: 8vh;
   height: 8vh;
@@ -37,14 +31,21 @@ nav {
 .links {
   display: flex;
   justify-content: space-around;
-  width: 75%;
   list-style-type: none;
+}
+.link {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding-right: 1rem;
 }
 .links a {
   color: white;
   list-style-type: none;
   text-decoration: none;
   letter-spacing: 2px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-weight: bold;
 }
 .burger {
@@ -55,22 +56,25 @@ nav {
   height: 5px;
   color: black;
   margin: 5px;
-  background-color: white;
 }
 
 /*home*/
 
 .main-container {
   background-color: steelblue;
-  height: 85vh;
   padding-bottom: 3rem;
+  height: 100vh;
   padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 .home-container {
   background-color: steelblue;
-  height: 85vh;
   padding-bottom: 3rem;
+  height: 100vh;
   padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 /*FlightCard*/
@@ -92,7 +96,6 @@ nav {
   border-radius: 5px;
   background-color: peachpuff;
   position: relative;
-  text-overflow: ellipsis;
   overflow-y: scroll;
   z-index: 10;
   box-shadow: 5px 5px 5px black;
@@ -112,11 +115,7 @@ nav {
   display: flex;
   font-family: "Inconsolata", monospace;
 }
-.flight-card-buttons {
-  padding-left: 0.5rem;
-  padding-bottom: 1rem;
-  font-family: "Inconsolata", monospace;
-}
+
 .flight-stats {
   padding-left: 0.5rem;
   padding-right: 1rem;
@@ -213,8 +212,7 @@ nav {
   font-size: larger;
 }
 .flight-card-buttons {
-  padding-left: 0.5rem;
-  padding-bottom: 1rem;
+  bottom: 1rem;
   font-family: "Inconsolata", monospace;
 }
 
@@ -223,6 +221,7 @@ nav {
 .squadron-container {
   background-color: steelblue;
   padding: 1rem;
+  font-family: "Inconsolata", monospace;
 }
 .members {
   margin-top: 1rem;
@@ -237,39 +236,6 @@ nav {
   border-radius: 5px;
   background-color: wheat;
 }
-.squadron-member-card {
-  margin: 1rem 1rem;
-  padding: 1rem 1rem;
-  height: 25vh;
-  min-height: 200px;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border: 2px;
-  border-radius: 5px;
-  background-color: peachpuff;
-  position: relative;
-  text-overflow: ellipsis;
-  overflow-y: scroll;
-  z-index: 10;
-  box-shadow: 5px 5px 5px black;
-}
-
-.squadron-card-nationality {
-  position: absolute;
-  top: 0.5rem;
-  left: 1rem;
-  font-weight: bolder;
-  font-family: "Inconsolata", monospace;
-}
-.squadron-card-nationality {
-  position: absolute;
-  top: 0.5rem;
-  left: 1rem;
-  font-weight: bolder;
-  font-family: "Inconsolata", monospace;
-}
 
 /*SQUADRON FORM*/
 
@@ -280,11 +246,11 @@ nav {
   padding-left: 1rem;
 }
 
-.squadron-member-card {
+.squadron-member-card-form {
   margin: 1rem 1rem;
   padding: 1rem 1rem;
-  height: 66vh;
   min-height: 250px;
+  max-width: 80%;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -296,6 +262,30 @@ nav {
   z-index: 10;
   box-shadow: 5px 5px 5px black;
 }
+.wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.squadron-member-card {
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+  min-height: 250px;
+  max-width: 80%;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: peachpuff;
+  position: relative;
+  z-index: 10;
+  box-shadow: 5px 5px 5px black;
+}
+.squadron-description {
+  padding-bottom: 2rem;
+}
+
 .member-form-description {
   height: 80%;
   background-color: peachpuff;
@@ -314,14 +304,36 @@ nav {
 }
 .member-form-image {
   border: 1px solid gray;
-  height: 200px;
-  width: 250px;
+  height: 250px;
+  max-height: 350px;
+  max-width: 250px;
+  height: auto;
   font-family: "Inconsolata", monospace;
   font-size: x-large;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
+.member-description-container {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-family: "Inconsolata", monospace;
+  font-size: large;
+  overscroll-behavior-y: auto;
+}
+.member-form-image-container {
+  border: 1px solid gray;
+  height: 250px;
+  max-width: 300px;
+  font-family: "Inconsolata", monospace;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .member-form-rank {
   font-family: "Inconsolata", monospace;
   background-color: peachpuff;
@@ -335,10 +347,16 @@ nav {
   font-family: "Inconsolata", monospace;
   background-color: peachpuff;
   border: none;
+  padding-top: 1rem;
   padding-right: 0.5rem;
   margin-right: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
   font-size: x-large;
+}
+.member-stats {
+  list-style-type: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .member-form-buttons {
   padding-top: 2rem;
@@ -450,14 +468,32 @@ nav {
 .menu-trigger img {
   border-radius: 90px;
 }
-
-@media screen and (max-width: 768px) {
-  .links {
-    width: 40%;
+@media screen and (max-width: 500px) {
+  .squadron-member-card {
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
+    min-height: 250px;
+    max-width: 80%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: peachpuff;
+    position: relative;
+    z-index: 10;
+    box-shadow: 5px 5px 5px black;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .links {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
   }
@@ -469,7 +505,7 @@ nav {
     background-color: rgb(235, 0, 35);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: space-around;
     z-index: 100;
     width: 33%;
     transform: translateX(100%);

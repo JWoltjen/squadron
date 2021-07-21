@@ -1,5 +1,4 @@
 import React, {useContext, useEffect, useState} from 'react'
-
 import {SquadronListContext} from '../contexts/SquadronContext'
 
 function MemberForm() {
@@ -9,22 +8,32 @@ function MemberForm() {
     const [description, setDescription] = useState('')
     const [nationality, setNationality] = useState('')
     const [rank, setRank] = useState('')
+    const [eyesight, setEyeSight] = useState(0)
+    const [awareness, setAwareness] = useState(0)
+    const [aggression, setAggression] = useState(0)
+    const [communication, setCommunication] = useState(0)
+    const [gunnery, setGunnery] = useState(0)
 
     const handleChange = e => {
         setDescription(e.target.value)
     }
     const handleSubmit = e => {
         e.preventDefault(); 
-        // if(editItem === null){
-            addMember(name, image, nationality, rank, description)
+        if(editItem === null){
+            addMember(name, image, nationality, rank, description, eyesight, awareness, aggression, communication, gunnery)
             setName('')
             setImage('')
             setNationality('')
             setRank('')
             setDescription('')
-        // } else {
-        //     editMember(name, image, nationality, rank, description, editItem.id)
-        // } 
+            setEyeSight(0)
+            setAwareness(0)
+            setAggression(0)
+            setCommunication(0)
+            setGunnery(0)
+        } else {
+            editMember(name, image, nationality, rank, description, eyesight, awareness, aggression, communication, gunnery, editItem.id)
+        } 
     }
     const updateNationality = e => {
         setNationality(e.target.value)
@@ -38,30 +47,56 @@ function MemberForm() {
       const updateImage = e => {
         setImage(e.target.value)
     }
+    const updateEyeSight = e => {
+        setEyeSight(e.target.value)
+    }
+    const updateAwareness = e => {
+        setAwareness(e.target.value)
+    }
+    const updateAggression = e => {
+        setAggression(e.target.value)
+    }
+    const updateCommunication = e => {
+        setCommunication(e.target.value)
+    }
+    const updateGunnery = e => {
+        setGunnery(e.target.value)
+    }
 
 
-    // useEffect(() => {
-    //     if(editItem !==null){
-    //         setName(editItem.name)
-    //         setImage(editItem.image)
-    //         setNationality(editItem.nationality)
-    //         setRank(editItem.rank)
-    //         setDescription(editItem.description)
-    //         console.log(editItem)
-    //     } else {
-    //         setDescription('')
-    //     }
-    // }, [editItem]); 
+    useEffect(() => {
+        if(editItem !==null){
+            setName(editItem.name)
+            setImage(editItem.image)
+            setNationality(editItem.nationality)
+            setRank(editItem.rank)
+            setDescription(editItem.description)
+            setEyeSight(editItem.eyesight)
+            setAwareness(editItem.awareness)
+            setAggression(editItem.aggression)
+            setCommunication(editItem.communication)
+            setGunnery(editItem.gunnery)
+        } else {
+            setDescription('')
+        }
+    }, [editItem]); 
 
     return (
         <>
         <h3 className='member-form-header'>
             Enter new member: 
         </h3>
-        <form onSubmit={handleSubmit} className='squadron-member-card'>
+        <form onSubmit={handleSubmit} className='squadron-member-card-form'>
             <div className='input-wrapper'>
-                    <div className='member-form-image'>
+                    <div className='member-form-image-container'>
                         Photo
+                         <input
+                            className='member-form-image-input'
+                            type='text'
+                            onChange={updateImage}
+                            placeholder='Enter image url'
+                            required
+                        />
                     </div>
                     <div className='input-container'>
                         <input 
@@ -75,6 +110,7 @@ function MemberForm() {
                             <input 
                             className='member-form-nationality' 
                             type='text' 
+                            value={nationality}
                             onChange={updateNationality}
                             placeholder='Nationality'
                             required
@@ -82,10 +118,61 @@ function MemberForm() {
                             <input 
                             className='member-form-rank' 
                             type='text' 
+                            value={rank}
                             onChange={updateRank}
                             placeholder='Rank'
                             required
                             />
+                            <input 
+                            type='range'
+                            value={eyesight}
+                            onChange={updateEyeSight}
+                            placeholder='Eyesight'
+                            min="0"
+                            max='5'
+                            required
+                            />
+                            Eyesight: {eyesight}
+                            <input 
+                            type='range'
+                            value={awareness}
+                            onChange={updateAwareness}
+                            placeholder='Awareness'
+                            min="0"
+                            max='5'
+                            required
+                            />
+                            Situational Awareness: {awareness}
+                            <input 
+                            type='range'
+                            value={aggression}
+                            onChange={updateAggression}
+                            placeholder="Aggression"
+                            min="0"
+                            max='5'
+                            required
+                            />
+                            Aggression: {aggression}
+                            <input
+                            type='range'
+                            value={communication}
+                            onChange={updateCommunication}
+                            placeholder='Communication'
+                            min="0"
+                            max='5'
+                            required
+                            />
+                            Communication: {communication}
+                            <input 
+                            type='range'
+                            value={gunnery}
+                            onChange={updateGunnery}
+                            placeholder='Gunnery'
+                            min="0"
+                            max='5'
+                            required
+                            />
+                            Gunnery: {gunnery}
                             </div>
                 </div>
             <textarea
