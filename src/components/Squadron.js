@@ -12,6 +12,7 @@ function Squadron() {
     return (
         <>
         <div className='squadron-container'>
+            <h1 className='squadron-roster-header'>Squadron Roster</h1>
             {members.length ? (
             <ul className='flight-log'>
                 {members.map(member => {

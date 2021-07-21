@@ -218,6 +218,16 @@ nav {
 
 /*SQUADRON*/
 
+.squadron-roster-header {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Anton", sans-serif;
+  color: white;
+}
 .squadron-container {
   background-color: steelblue;
   padding: 1rem;
