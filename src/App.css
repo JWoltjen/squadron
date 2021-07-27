@@ -91,7 +91,8 @@ nav {
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  height: 100vh;
 }
 .flight-card {
   margin: 2rem 2rem;
