@@ -4,9 +4,20 @@ import {v4 as uuidv4} from 'uuid'
 export const SquadronListContext = createContext() 
 
 const SquadronContextProvider = props => {
-        const initialState = JSON.parse(localStorage.getItem('members'))
+    const initialState = localStorage.getItem("members")
 
-    const [members, setMembers] = useState(initialState)
+    const [members, setMembers] = useState(initialState ? JSON.parse(initialState) : [{
+        name: "Wolf",
+        image: "none",
+        nationality: "United States",
+        rank: "major", 
+        description: "none", 
+        eyesight: 5, 
+        awareness: 5, 
+        aggression: 4, 
+        communication: 3,
+        gunnery: 2
+    }])
 
     useEffect(() => {
         localStorage.setItem("members", JSON.stringify(members))

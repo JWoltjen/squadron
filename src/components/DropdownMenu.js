@@ -6,7 +6,6 @@ const DropdownMenu = () => {
     const {flights} = useContext(FlightListContext)
     const [kills, setKills] = useState(flights.reduce((killTotal, currentFlight) => {
                     killTotal += Number(currentFlight.kills)
-                    console.log(flights)
                     return killTotal
                 }, 0))
 
