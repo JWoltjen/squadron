@@ -78,6 +78,7 @@ nav {
   letter-spacing: 2px;
   color: white;
   font-family: "Anton", sans-serif;
+  overflow: auto;
 }
 .hero-welcome-img {
   border: 1px black solid;
@@ -417,6 +418,7 @@ nav {
   align-items: center;
   padding-left: 1rem;
   font-family: "Anton", sans-serif;
+  z-index: 100;
 }
 
 .menu-container {

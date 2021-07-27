@@ -8,7 +8,7 @@ const SquadronContextProvider = props => {
 
     const [members, setMembers] = useState(/*initialState ? JSON.parse(initialState) :*/ [{
         name: "Wolf",
-        image: "none",
+        image: "https://thislandpress.com/wp-content/uploads/2014/12/risner.jpg",
         nationality: "United States",
         rank: "major", 
         description: "none", 
