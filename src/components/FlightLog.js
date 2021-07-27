@@ -5,13 +5,11 @@ import Flight from './Flight'
 
 function FlightLog() {
     const {flights} = useContext(FlightListContext)
-    const showFlights = () => {
-        console.log("these are the flights", flights)
-    }
+  
     return (
         <>
         <div className='flight-log-container'>
-             <h3 className='flight-log-header' onClick={showFlights}>
+             <h3 className='flight-log-header'>
                 Flight Log
                 </h3>
             {flights.length ? (
