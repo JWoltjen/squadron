@@ -70,11 +70,18 @@ nav {
 }
 .home-container {
   background-color: steelblue;
-  padding-bottom: 3rem;
   height: 100vh;
-  padding-top: 1rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "Anton", sans-serif;
+}
+.hero-welcome-img {
+  border: 1px black solid;
+  border-radius: 6px;
 }
 
 /*FlightCard*/
@@ -183,18 +190,6 @@ nav {
   padding-left: 2px;
   padding-right: 2px;
   font-family: "Inconsolata", monospace;
-}
-/*Home*/
-.home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.hero-welcome {
-  height: auto;
-  width: auto;
-  border: 1px black solid;
-  border-radius: 6px;
 }
 
 /*Flight*/

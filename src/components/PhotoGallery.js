@@ -1,4 +1,5 @@
 import React from 'react'
+import {Carousel} from '3d-react-carousal'
 import BigIron from '../images/BigIron.png'
 import bigiron1 from '../images/bigiron1.png'
 import bigiron2 from '../images/bigiron2.png'
@@ -8,16 +9,20 @@ import bigiron5 from '../images/bigiron5.webp'
 import bigiron6 from '../images/bigiron6.png'
 import GunfightersV from '../images/GunfightersV.png'
 function PhotoGallery() {
+    let slides = [
+                <img src={BigIron}/>,
+                <img src={bigiron1}/>,
+                <img src={bigiron2}/>,
+                <img src={bigiron3}/>,
+                <img src={bigiron4}/>,
+                <img src={bigiron5}/>,
+                <img src={bigiron6}/>,
+                <img src={GunfightersV}/>,  
+            ]
     return (
-        <div className='photo-gallery'>
-            <img src={BigIron}/>
-            <img src={bigiron1}/>
-            <img src={bigiron2}/>
-            <img src={bigiron3}/>
-            <img src={bigiron4}/>
-            <img src={bigiron5}/>
-            <img src={bigiron6}/>
-            <img src={GunfightersV}/>
+        <div className='home-container'>
+            <h1> Photo Gallery</h1>
+        <Carousel slides={slides} autoplay={false} interval={5000}/>          
         </div>
     )
 }
