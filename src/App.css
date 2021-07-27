@@ -82,12 +82,15 @@ nav {
   background-color: steelblue;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .flight-card {
-  margin: 1rem 1rem;
-  padding: 1rem 1rem;
+  margin: 2rem 2rem;
+  padding: 1rem 2rem;
   height: 25vh;
-  min-height: 200px;
+  min-height: 250px;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -97,7 +100,6 @@ nav {
   background-color: peachpuff;
   position: relative;
   overflow-y: scroll;
-  z-index: 10;
   box-shadow: 5px 5px 5px black;
 }
 
@@ -218,6 +220,16 @@ nav {
 
 /*SQUADRON*/
 
+.squadron-roster-header {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Anton", sans-serif;
+  color: white;
+}
 .squadron-container {
   background-color: steelblue;
   padding: 1rem;
