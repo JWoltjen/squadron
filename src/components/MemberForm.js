@@ -1,5 +1,13 @@
 import React, {useContext, useEffect, useState} from 'react'
 import {SquadronListContext} from '../contexts/SquadronContext'
+import sabrepilot1 from '../portraits/sabrepilot1.jpeg'
+import sabrepilot2 from '../portraits/sabrepilot2.jpeg'
+import sabrepilot3 from '../portraits/sabrepilot3.jpeg'
+import sabrepilot4 from '../portraits/sabrepilot4.png'
+import sabrepilot5 from '../portraits/sabrepilot5.jpeg'
+import sabrepilot6 from '../portraits/sabrepilot6.webp'
+import sabrepilot7 from '../portraits/sabrepilot7.jpeg'
+import sabrepilot8 from '../portraits/sabrepilot8.jpeg'
 
 function MemberForm() {
     const {addMember, editItem, editMember} = useContext(SquadronListContext)
@@ -14,6 +22,9 @@ function MemberForm() {
     const [communication, setCommunication] = useState(0)
     const [gunnery, setGunnery] = useState(0)
 
+    const portraits = [
+        sabrepilot1, sabrepilot2, sabrepilot3, sabrepilot4, sabrepilot5, sabrepilot6, sabrepilot7, sabrepilot8
+    ]
     const handleChange = e => {
         setDescription(e.target.value)
     }
@@ -62,6 +73,9 @@ function MemberForm() {
     const updateGunnery = e => {
         setGunnery(e.target.value)
     }
+    const getRandomPortrait = () => {
+        setImage(portraits[0])
+    }
 
 
     useEffect(() => {
@@ -89,14 +103,16 @@ function MemberForm() {
         <form onSubmit={handleSubmit} className='squadron-member-card-form'>
             <div className='input-wrapper'>
                     <div className='member-form-image-container'>
-                        Photo
+                            Photo
                          <input
                             className='member-form-image-input'
                             type='text'
                             onChange={updateImage}
                             placeholder='Enter image url'
-                            required
                         />
+                        <button onClick={getRandomPortrait}>
+                            Random
+                        </button>
                     </div>
                     <div className='input-container'>
                         <input 
