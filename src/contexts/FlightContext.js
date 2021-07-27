@@ -4,9 +4,15 @@ import {v4 as uuidv4} from 'uuid'
 export const FlightListContext = createContext() 
 
 const FlightContextProvider = props => {
-    const initialState = JSON.parse(localStorage.getItem('flights')) 
+    const initialState = localStorage.getItem("flights")
+   const [flights, setFlights] = useState(initialState ? JSON.parse(initialState) : [{
 
-   const [flights, setFlights] = useState(initialState)
+    date: "July 4, 2021",
+    description: "none", 
+    kills: 0, 
+    wingmen: 0, 
+    losses: 0, 
+   }])
    
     useEffect(() => {
         localStorage.setItem("flights", JSON.stringify(flights))
