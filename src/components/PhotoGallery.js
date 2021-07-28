@@ -21,7 +21,7 @@ function PhotoGallery() {
             ]
     return (
         <div className='home-container'>
-            <h1> Photo Gallery</h1>
+            <h1 className='home-title'> Photo Gallery</h1>
         <Carousel slides={slides} autoplay={false} interval={5000}/>          
         </div>
     )

@@ -24,6 +24,9 @@ const DropdownMenu = () => {
            </button>
            <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
                <ul>
+                    <Link to ='/Home'>
+                        <li className='link'>Home</li>
+                    </Link>
                     <Link to ='/Squadron'>
                         <li className='link'>Squadron</li>
                     </Link>
