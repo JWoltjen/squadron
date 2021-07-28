@@ -8,13 +8,13 @@ const SquadronContextProvider = props => {
 
     const [members, setMembers] = useState(initialState ? JSON.parse(initialState) : [{
         name: "Wolf",
-        image: "none",
+        image: "https://thislandpress.com/wp-content/uploads/2014/12/risner.jpg",
         nationality: "United States",
-        rank: "major", 
-        description: "none", 
+        rank: "Major", 
+        description: "Major Jeffrey 'Wolf' Woltjen originally began flying virtual combat missions on the popular MMO Warthunder in 2012. There, he became one of the founding members of the Bloody Red Squadron in June 2013, and it quickly became one of the leading squadrons amongst a player pool of 40,000. Wolf soon took an interest in F-86 v. MiG-15 combat, which quickly turned into an obsession. Through 2014-2018, Wolf became one of the most widely recognizable jet jockeys within the Warthunder community. After taking a short period off, he returned to DCS in 2021 where he again quickly developed a reputation within the Korean War community as being the deadliest Sabre pilot on the server.", 
         eyesight: 5, 
         awareness: 5, 
-        aggression: 4, 
+        aggression: 5, 
         communication: 3,
         gunnery: 2
     }])

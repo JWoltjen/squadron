@@ -20,6 +20,9 @@ function Navbar() {
         <nav>
             <h3 className="logo">=Squadron= </h3>
             <ul className='links'>
+                <Link to ='/Home'>
+                    <li className='link'>Home</li>
+                </Link>
                 <Link to ='/Squadron'>
                     <li className='link'>Squadron</li>
                 </Link>

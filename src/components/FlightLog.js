@@ -5,7 +5,6 @@ import Flight from './Flight'
 
 function FlightLog() {
     const {flights} = useContext(FlightListContext)
-  
     return (
         <>
         <div className='flight-log-container'>

@@ -70,11 +70,33 @@ nav {
 }
 .home-container {
   background-color: steelblue;
-  padding-bottom: 3rem;
   height: 100vh;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "Anton", sans-serif;
+  overflow: auto;
+}
+.hero-welcome-img {
+  border: 1px black solid;
+  border-radius: 6px;
+  box-shadow: 5px 5px 5px black;
+}
+.home-card {
+  padding: 1rem 1rem;
+}
+.home-title {
+  display: flex;
+  justify-content: center;
+}
+.home-list {
+  padding: 1rem 1rem;
+}
+.home-list li {
   padding-top: 1rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
 }
 
 /*FlightCard*/
@@ -84,7 +106,8 @@ nav {
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  height: 100vh;
 }
 .flight-card {
   margin: 2rem 2rem;
@@ -169,6 +192,14 @@ nav {
 }
 .flight-form-buttons {
   font-family: "Inconsolata", monospace;
+  bottom: 1rem;
+}
+.btn-add-flight-btn {
+  margin-right: 0.5rem;
+  height: 30px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: "Inconsolata", monospace;
 }
 .btn-delete-flight-btn {
   margin-right: 0.5rem;
@@ -178,6 +209,13 @@ nav {
   font-family: "Inconsolata", monospace;
 }
 .btn-edit-flight-btn {
+  margin-right: 0.5rem;
+  height: 30px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: "Inconsolata", monospace;
+}
+.btn-clear-flight-btn {
   margin-right: 0.5rem;
   height: 30px;
   padding-left: 2px;
@@ -409,6 +447,7 @@ nav {
   align-items: center;
   padding-left: 1rem;
   font-family: "Anton", sans-serif;
+  z-index: 100;
 }
 
 .menu-container {
