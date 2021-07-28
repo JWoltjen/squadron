@@ -6,7 +6,7 @@ export const SquadronListContext = createContext()
 const SquadronContextProvider = props => {
     const initialState = localStorage.getItem("members")
 
-    const [members, setMembers] = useState(/*initialState ? JSON.parse(initialState) :*/ [{
+    const [members, setMembers] = useState(initialState ? JSON.parse(initialState) : [{
         name: "Wolf",
         image: "https://thislandpress.com/wp-content/uploads/2014/12/risner.jpg",
         nationality: "United States",
