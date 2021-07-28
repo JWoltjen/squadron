@@ -19,9 +19,8 @@ function App() {
           <Route path='/Squadron' component={Squadron}/>
           <Route path='/PhotoGallery' component={PhotoGallery}/>
           <Route path='/FlightLog' component={FlightLog}/>
-        </Switch> 
-        <div className='home-container'>
-          <h1>Welcome to Squadron!</h1>
+           <div className='home-container'>
+          <h1 className='home-title'>Welcome to Squadron!</h1>
           <img className='hero-welcome-img' src={banner}/>
           <div className='home-card'>
           <p>Squadron is a single-page application designed to document missions flown by virtual pilots in a number of popular aviation-based games. With Squadron, you can do the following things:
@@ -33,6 +32,7 @@ function App() {
           </p>
           </div>
         </div>
+        </Switch> 
       <Footer/>
       </Router>
     </FlightContextProvider>

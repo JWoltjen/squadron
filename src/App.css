@@ -83,6 +83,20 @@ nav {
 .hero-welcome-img {
   border: 1px black solid;
   border-radius: 6px;
+  box-shadow: 5px 5px 5px black;
+}
+.home-card {
+  padding: 1rem 1rem;
+}
+.home-title {
+  display: flex;
+  justify-content: center;
+}
+.home-list {
+  padding: 1rem 1rem;
+}
+.home-list li {
+  padding-top: 1rem;
 }
 
 /*FlightCard*/
@@ -178,6 +192,14 @@ nav {
 }
 .flight-form-buttons {
   font-family: "Inconsolata", monospace;
+  bottom: 1rem;
+}
+.btn-add-flight-btn {
+  margin-right: 0.5rem;
+  height: 30px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: "Inconsolata", monospace;
 }
 .btn-delete-flight-btn {
   margin-right: 0.5rem;
@@ -187,6 +209,13 @@ nav {
   font-family: "Inconsolata", monospace;
 }
 .btn-edit-flight-btn {
+  margin-right: 0.5rem;
+  height: 30px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: "Inconsolata", monospace;
+}
+.btn-clear-flight-btn {
   margin-right: 0.5rem;
   height: 30px;
   padding-left: 2px;
