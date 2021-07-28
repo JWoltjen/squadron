@@ -108,6 +108,7 @@ nav {
   flex-direction: column;
   justify-content: flex-start;
   height: 100vh;
+  overflow: auto;
 }
 .flight-card {
   margin: 2rem 2rem;
